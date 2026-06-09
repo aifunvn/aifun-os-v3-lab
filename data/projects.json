@@ -1,0 +1,153 @@
+[
+  {
+    "id": "proj-aifun-os",
+    "name": "AIFUN OS — AI Operating System",
+    "description": "Nền tảng AI Operating System cho doanh nghiệp SME Việt Nam. Web app tích hợp toàn bộ AI Tools, Prompt Library, Skills, CRM, Automation và Dashboard vào 1 hệ thống duy nhất.",
+    "color": "blue",
+    "progress": 80,
+    "status": "inprogress",
+    "statusLabel": "Đang làm",
+    "deadline": "30/06/2026",
+    "updatedAt": "09/06/2026",
+    "team": ["DTC", "NV", "TT"],
+    "tech": ["Next.js", "Claude API", "Google Sheets", "Tailwind"],
+    "tasks": [
+      { "name": "V2.0 UI/UX hoàn thiện", "done": true },
+      { "name": "Data layer JSON files", "done": true },
+      { "name": "Google Sheets API integration", "done": false },
+      { "name": "Skill launch engine", "done": true },
+      { "name": "Mobile responsive", "done": true },
+      { "name": "SEO & performance optimization", "done": false },
+      { "name": "User auth & multi-tenant", "done": false },
+      { "name": "Launch aifun.ai.vn", "done": false }
+    ],
+    "kpis": {
+      "target": "500 users trong 3 tháng đầu",
+      "revenue": "₫50M MRR tháng 6/2026",
+      "nps": "NPS > 50"
+    },
+    "budget": "₫180,000,000",
+    "priority": "critical"
+  },
+  {
+    "id": "proj-crm-ai",
+    "name": "CRM AI — Smart Customer Management",
+    "description": "Hệ thống CRM thông minh tích hợp AI để tự động chấm điểm lead, gợi ý action tiếp theo, và tự động hóa follow-up. Tích hợp với Zalo, Gmail, Google Calendar.",
+    "color": "teal",
+    "progress": 55,
+    "status": "inprogress",
+    "statusLabel": "Đang làm",
+    "deadline": "31/07/2026",
+    "updatedAt": "08/06/2026",
+    "team": ["DTC", "LM", "PH"],
+    "tech": ["HubSpot API", "Make.com", "Claude API", "Zalo API", "Google Workspace"],
+    "tasks": [
+      { "name": "CRM pipeline design & setup HubSpot", "done": true },
+      { "name": "Lead scoring model AI", "done": true },
+      { "name": "Zalo OA integration", "done": true },
+      { "name": "Email nurturing sequences (7 email)", "done": true },
+      { "name": "Gmail auto-follow-up automation", "done": false },
+      { "name": "Sales dashboard báo cáo real-time", "done": false },
+      { "name": "AI chatbot CSKH Zalo", "done": false },
+      { "name": "Mobile app cho sales rep", "done": false }
+    ],
+    "kpis": {
+      "target": "Tăng tỷ lệ chuyển đổi từ 23% lên 35%",
+      "revenue": "Tăng doanh thu 40% trong Q3",
+      "time": "Giảm 60% thời gian follow-up thủ công"
+    },
+    "budget": "₫120,000,000",
+    "priority": "high"
+  },
+  {
+    "id": "proj-lms-aifun",
+    "name": "LMS AIFUN — Learning Management System",
+    "description": "Nền tảng học trực tuyến của AIFUN cho các khóa AI Business OS, Prompt Engineering và Make Automation. Tích hợp video hosting, quiz, certificate và cộng đồng học viên.",
+    "color": "purple",
+    "progress": 30,
+    "status": "inprogress",
+    "statusLabel": "Đang làm",
+    "deadline": "31/08/2026",
+    "updatedAt": "06/06/2026",
+    "team": ["DTC", "TT"],
+    "tech": ["Teachable", "Notion", "Loom", "Circle.so", "Zapier"],
+    "tasks": [
+      { "name": "Course curriculum AI Business OS hoàn chỉnh", "done": true },
+      { "name": "Platform setup Teachable", "done": true },
+      { "name": "Video recording 12 modules", "done": false },
+      { "name": "Quiz & assignment design", "done": false },
+      { "name": "Community Circle.so setup", "done": false },
+      { "name": "Payment gateway tích hợp", "done": false },
+      { "name": "Landing page & sales funnel", "done": false },
+      { "name": "Affiliate program setup", "done": false }
+    ],
+    "kpis": {
+      "target": "500 học viên năm đầu",
+      "revenue": "₫1.5B doanh thu khóa học/năm",
+      "nps": "Completion rate > 70%"
+    },
+    "budget": "₫85,000,000",
+    "priority": "high"
+  },
+  {
+    "id": "proj-vet-crm",
+    "name": "Veterinary CRM — Hệ thống thú y AI",
+    "description": "CRM chuyên biệt cho phòng khám thú y: quản lý bệnh nhân (pets), lịch khám, nhắc nhở vaccine, hồ sơ bệnh án điện tử và AI hỗ trợ chẩn đoán sơ bộ. Giải pháp đầu tiên cho ngành thú y Việt Nam.",
+    "color": "green",
+    "progress": 45,
+    "status": "inprogress",
+    "statusLabel": "Đang làm",
+    "deadline": "30/09/2026",
+    "updatedAt": "07/06/2026",
+    "team": ["DTC", "BS_Nam", "Dev_Hung"],
+    "tech": ["Python", "FastAPI", "PostgreSQL", "Claude API", "React Native"],
+    "tasks": [
+      { "name": "User research 15 phòng khám thú y", "done": true },
+      { "name": "Product requirements document", "done": true },
+      { "name": "Database schema design", "done": true },
+      { "name": "Backend API development", "done": false },
+      { "name": "Web dashboard cho bác sĩ", "done": false },
+      { "name": "Mobile app chủ thú cưng", "done": false },
+      { "name": "AI chẩn đoán sơ bộ module", "done": false },
+      { "name": "Tích hợp thanh toán VNPay/MoMo", "done": false },
+      { "name": "Pilot 5 phòng khám đối tác", "done": false }
+    ],
+    "kpis": {
+      "target": "50 phòng khám sử dụng trong năm đầu",
+      "revenue": "₫500M ARR năm 1",
+      "market": "Top 3 market leader ngành vet tech Việt Nam"
+    },
+    "budget": "₫250,000,000",
+    "priority": "medium"
+  },
+  {
+    "id": "proj-growth-ops",
+    "name": "Growth Ops — Vận hành tăng trưởng",
+    "description": "Hệ thống vận hành tăng trưởng tích hợp cho AIFUN: automation marketing, content production pipeline, data analytics, A/B testing framework và growth experiment tracking. Mục tiêu đạt 10x growth trong 12 tháng.",
+    "color": "orange",
+    "progress": 65,
+    "status": "review",
+    "statusLabel": "Review",
+    "deadline": "15/06/2026",
+    "updatedAt": "09/06/2026",
+    "team": ["DTC", "Marketing_Team"],
+    "tech": ["Make.com", "Google Analytics 4", "Google Looker Studio", "Mailchimp", "Buffer"],
+    "tasks": [
+      { "name": "Analytics setup GA4 + Looker Studio dashboard", "done": true },
+      { "name": "Email automation sequences (7 nurturing)", "done": true },
+      { "name": "Social media automation Buffer", "done": true },
+      { "name": "Content calendar Q3 2026", "done": true },
+      { "name": "SEO audit & optimization", "done": true },
+      { "name": "A/B testing framework setup", "done": false },
+      { "name": "Referral program launch", "done": false },
+      { "name": "Influencer/KOL partnership program", "done": false }
+    ],
+    "kpis": {
+      "target": "3x website traffic trong Q3",
+      "revenue": "50 qualified leads/tháng từ organic",
+      "cac": "Giảm CAC xuống dưới ₫2M/customer"
+    },
+    "budget": "₫60,000,000",
+    "priority": "high"
+  }
+]

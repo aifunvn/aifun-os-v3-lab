@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "p001",
+    "title": "Viết email marketing chuyên nghiệp B2B",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Bạn là chuyên gia email marketing B2B với 10 năm kinh nghiệm. Hãy viết email marketing cho sản phẩm/dịch vụ [TÊN SẢN PHẨM] nhắm đến [ĐỐI TƯỢNG DOANH NGHIỆP]. Mục tiêu: [MỤC TIÊU]. Bao gồm: (1) Subject line A/B test 3 phiên bản, (2) Preview text hấp dẫn, (3) Nội dung email 200-250 từ với hook mạnh, giá trị rõ ràng, social proof, (4) CTA nổi bật, (5) P.S thêm urgency. Tone: chuyên nghiệp, thuyết phục, tập trung ROI.",
+    "tags": ["Email", "B2B", "Marketing"],
+    "uses": 342,
+    "rating": 5
+  },
+  {
+    "id": "p002",
+    "title": "Script cold call bán hàng B2B",
+    "category": "sales",
+    "tool": "ChatGPT",
+    "content": "Tạo script gọi điện cold call cho [SẢN PHẨM/DỊCH VỤ] nhắm đến [CHỨC DANH] tại [LOẠI DOANH NGHIỆP]. Thời gian mục tiêu: 3-5 phút. Cấu trúc: (1) Mở đầu tạo sự tò mò trong 10 giây đầu, (2) Câu hỏi khám phá vấn đề (3 câu), (3) Pitch giải pháp 30 giây, (4) Xử lý 5 từ chối phổ biến nhất, (5) CTA đặt lịch demo/meeting. Giọng điệu tự nhiên, không đọc như robot.",
+    "tags": ["Cold Call", "Sales", "Script"],
+    "uses": 218,
+    "rating": 4
+  },
+  {
+    "id": "p003",
+    "title": "Kịch bản video TikTok viral 60 giây",
+    "category": "content",
+    "tool": "Claude",
+    "content": "Viết kịch bản TikTok 60 giây về [CHỦ ĐỀ] cho [BRAND/NGƯỜI DÙNG]. Cấu trúc: Hook 0-3 giây (câu hỏi gây sốc HOẶC claim táo bạo HOẶC visual mạnh), Nội dung 4-50 giây (3 điểm chính, mỗi điểm 10-15 giây, thêm text overlay), CTA 51-60 giây (follow + comment + share). Thêm: gợi ý âm nhạc trending, góc quay, transition effects. Ngôn ngữ gen Z, có emoji, hashtag SEO.",
+    "tags": ["TikTok", "Video", "Viral"],
+    "uses": 456,
+    "rating": 5
+  },
+  {
+    "id": "p004",
+    "title": "Phân tích đối thủ cạnh tranh SWOT chi tiết",
+    "category": "analysis",
+    "tool": "Perplexity",
+    "content": "Thực hiện phân tích cạnh tranh toàn diện về [TÊN CÔNG TY/BRAND] trong ngành [NGÀNH]. Yêu cầu: (1) Tổng quan: quy mô, thị phần, USP, khách hàng mục tiêu, (2) SWOT analysis đầy đủ với evidence cụ thể, (3) Chiến lược marketing & sales hiện tại (kênh, messaging, pricing), (4) Điểm yếu có thể khai thác, (5) Cơ hội differentiation cho chúng tôi, (6) Dự đoán hướng đi tiếp theo. Kèm nguồn tham khảo.",
+    "tags": ["SWOT", "Competitor", "Strategy"],
+    "uses": 189,
+    "rating": 5
+  },
+  {
+    "id": "p005",
+    "title": "Job Description hấp dẫn thu hút top talent",
+    "category": "hr",
+    "tool": "ChatGPT",
+    "content": "Viết Job Description hấp dẫn cho vị trí [VỊ TRÍ] tại công ty [CÔNG TY] trong ngành [NGÀNH]. Cấu trúc: (1) Company story 3 dòng — tại sao ứng viên nên quan tâm, (2) Mission của vị trí này — impact thực sự, (3) Responsibilities 5-7 điểm dạng achievement-oriented, (4) Requirements: must-have vs nice-to-have riêng biệt, (5) Benefits nổi bật + culture perks, (6) Cách ứng tuyển rõ ràng. Tránh corporate speak, dùng ngôn ngữ con người.",
+    "tags": ["JD", "Recruitment", "HR"],
+    "uses": 267,
+    "rating": 5
+  },
+  {
+    "id": "p006",
+    "title": "Bài viết LinkedIn thought leader 500 từ",
+    "category": "content",
+    "tool": "Claude",
+    "content": "Viết bài LinkedIn 500 từ về [CHỦ ĐỀ] theo góc nhìn thought leader. Cấu trúc: (1) Hook 2 dòng đầu tạo pattern interrupt — câu hỏi, số liệu gây ngạc nhiên, hoặc observation trái chiều, (2) Câu chuyện cá nhân 80-100 từ liên quan chủ đề, (3) 3 insight giá trị mỗi insight có ví dụ cụ thể, (4) Takeaway có thể hành động ngay, (5) CTA tương tác — câu hỏi mở cho comment. Thêm 5 hashtag liên quan. Không dùng buzzword rỗng.",
+    "tags": ["LinkedIn", "Thought Leader", "Personal Brand"],
+    "uses": 334,
+    "rating": 5
+  },
+  {
+    "id": "p007",
+    "title": "Xây dựng SOP quy trình nghiệp vụ chi tiết",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Xây dựng SOP chi tiết cho quy trình [TÊN QUY TRÌNH] của bộ phận [BỘ PHẬN]. Cấu trúc tài liệu: (1) Mục đích & phạm vi áp dụng, (2) Định nghĩa & thuật ngữ, (3) Người thực hiện & RACI matrix, (4) Quy trình từng bước với flowchart text, (5) Checklist thực hiện, (6) Công cụ & tài nguyên cần thiết, (7) KPI & cách đo lường, (8) Xử lý ngoại lệ & escalation, (9) Lịch sử cập nhật. Format: đánh số rõ ràng, dễ đào tạo.",
+    "tags": ["SOP", "Process", "Operations"],
+    "uses": 412,
+    "rating": 5
+  },
+  {
+    "id": "p008",
+    "title": "Kế hoạch marketing 90 ngày đầy đủ",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Lập kế hoạch marketing 90 ngày cho [SẢN PHẨM/DỊCH VỤ] với ngân sách [NGÂN SÁCH]. Target: [MỤC TIÊU DOANH THU/LEADS]. Cấu trúc: Tháng 1 — Foundation (brand positioning, content pillars, kênh ưu tiên), Tháng 2 — Acceleration (paid ads, influencer, partnerships), Tháng 3 — Optimization (A/B test, scale winners, retention). Mỗi tháng: OKR cụ thể, weekly milestones, budget split, team responsibilities, tools cần dùng.",
+    "tags": ["Marketing Plan", "90 Days", "Strategy"],
+    "uses": 198,
+    "rating": 5
+  },
+  {
+    "id": "p009",
+    "title": "Proposal dự án thuyết phục khách hàng",
+    "category": "sales",
+    "tool": "Claude",
+    "content": "Viết proposal chuyên nghiệp cho [KHÁCH HÀNG] về dự án [TÊN DỰ ÁN] trị giá [GIÁ TRỊ]. Cấu trúc: (1) Executive Summary 1 trang — vấn đề, giải pháp, ROI kỳ vọng, (2) Phân tích vấn đề & cơ hội của khách hàng, (3) Giải pháp đề xuất chi tiết — deliverables, methodology, (4) Timeline & milestones cụ thể, (5) Team & experience liên quan, (6) ROI calculator với assumptions rõ ràng, (7) Investment — 3 gói Good/Better/Best, (8) Next steps & CTA. Tone: confident, value-focused.",
+    "tags": ["Proposal", "Sales", "B2B"],
+    "uses": 156,
+    "rating": 5
+  },
+  {
+    "id": "p010",
+    "title": "Phân tích dữ liệu kinh doanh & đề xuất hành động",
+    "category": "analysis",
+    "tool": "ChatGPT",
+    "content": "Phân tích dữ liệu kinh doanh sau đây và đưa ra insight hành động: [DÁN DỮ LIỆU HOẶC MÔ TẢ]. Yêu cầu: (1) Tóm tắt executive 5 dòng — key findings, (2) Top 3 trend quan trọng nhất với interpretation, (3) Anomaly detection — điểm bất thường cần chú ý, (4) So sánh với benchmark ngành nếu có, (5) Root cause analysis cho vấn đề chính, (6) 5 hành động ưu tiên với expected impact & timeline, (7) Risk & mitigation. Dùng số liệu cụ thể trong mỗi insight.",
+    "tags": ["Data Analysis", "Business Intelligence", "Strategy"],
+    "uses": 145,
+    "rating": 5
+  },
+  {
+    "id": "p011",
+    "title": "Thiết kế workflow automation với Make",
+    "category": "automation",
+    "tool": "Claude",
+    "content": "Thiết kế workflow automation với Make.com cho quy trình: [MÔ TẢ QUY TRÌNH]. Context: team [QUY MÔ], công cụ hiện dùng: [TOOLS]. Yêu cầu output: (1) Sơ đồ luồng dữ liệu dạng text với mũi tên, (2) Danh sách modules Make cần dùng và cấu hình key settings, (3) Trigger event & điều kiện lọc, (4) Data transformation & mapping, (5) Error handling & retry logic, (6) Testing checklist 10 scenarios, (7) Ước tính operations/tháng & cost. Tối ưu cho reliability > speed.",
+    "tags": ["Make", "Automation", "No-code"],
+    "uses": 234,
+    "rating": 5
+  },
+  {
+    "id": "p012",
+    "title": "Script webinar bán hàng 60 phút",
+    "category": "sales",
+    "tool": "Claude",
+    "content": "Viết script webinar bán hàng 60 phút cho [SẢN PHẨM] nhắm đến [ĐỐI TƯỢNG]. Cấu trúc: 0-5 phút (Welcome, set expectations, build authority), 5-15 phút (Story — vấn đề industry & transformation), 15-35 phút (Nội dung giá trị: 3 secrets/frameworks + case study), 35-45 phút (Pitch: reveal solution, demo, testimonials, price anchoring), 45-55 phút (Offer stack + bonus + guarantee + urgency), 55-60 phút (Q&A scripted + close). Kèm slide outline và câu chuyện chuyển tiếp.",
+    "tags": ["Webinar", "Sales", "Script"],
+    "uses": 289,
+    "rating": 5
+  },
+  {
+    "id": "p013",
+    "title": "Chiến lược content marketing 6 tháng",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Xây dựng chiến lược content marketing 6 tháng cho [BRAND] trong ngành [NGÀNH]. Target audience: [PERSONA]. Bao gồm: (1) Content audit & gap analysis, (2) Brand voice & tone guidelines, (3) Content pillars 5 chủ đề + lý do chọn, (4) Content calendar framework — loại content, tần suất, kênh theo tuần, (5) SEO keyword clusters 30 từ khóa theo priority, (6) Phân bổ content: ToFu/MoFu/BoFu ratio, (7) Distribution strategy cho mỗi kênh, (8) KPIs & reporting cadence. Kèm template content brief.",
+    "tags": ["Content Strategy", "SEO", "Marketing"],
+    "uses": 178,
+    "rating": 4
+  },
+  {
+    "id": "p014",
+    "title": "Onboarding plan nhân viên mới 30-60-90 ngày",
+    "category": "hr",
+    "tool": "Claude",
+    "content": "Tạo onboarding plan 30-60-90 ngày cho nhân viên mới vị trí [VỊ TRÍ] tại bộ phận [BỘ PHẬN]. Ngày 1: Setup, introductions, company culture tour. Tuần 1: Product/service immersion, shadow sessions. Tháng 1: Milestones, key relationships, first project. Tháng 2: Independent work, feedback loops, skill gaps. Tháng 3: Full performance, OKR alignment, career path discussion. Mỗi giai đoạn: learning objectives, success metrics, manager check-in agenda, resources cần thiết.",
+    "tags": ["Onboarding", "HR", "Training"],
+    "uses": 145,
+    "rating": 5
+  },
+  {
+    "id": "p015",
+    "title": "Facebook ads copy A/B test 5 phiên bản",
+    "category": "marketing",
+    "tool": "ChatGPT",
+    "content": "Viết 5 phiên bản Facebook ad copy cho [SẢN PHẨM/DỊCH VỤ] nhắm đến [TARGET AUDIENCE]. Mỗi phiên bản sử dụng angle khác nhau: (1) Pain point — khai thác nỗi đau, (2) Dream outcome — mô tả kết quả lý tưởng, (3) Social proof — số liệu & testimonial, (4) Curiosity gap — tạo tò mò, (5) Direct offer — offer và urgency. Mỗi version: Primary text (125 chars), Headline (40 chars), Description (30 chars), CTA button. Kèm gợi ý visual concept cho mỗi angle.",
+    "tags": ["Facebook Ads", "Copywriting", "A/B Test"],
+    "uses": 312,
+    "rating": 5
+  },
+  {
+    "id": "p016",
+    "title": "Phân tích thị trường & cơ hội kinh doanh",
+    "category": "analysis",
+    "tool": "Perplexity",
+    "content": "Phân tích thị trường [NGÀNH/THỊ TRƯỜNG] tại Việt Nam năm 2025. Bao gồm: (1) Market size & growth rate với nguồn số liệu, (2) Market segmentation — 5 phân khúc chính, (3) Key players & market share, (4) Drivers & barriers của ngành, (5) Customer behavior & buying journey, (6) Regulatory landscape, (7) Technology disruption trends, (8) Unmet needs & white space opportunities, (9) Entry strategy recommendations, (10) 3-5 năm forecast. Format: executive brief + detailed sections.",
+    "tags": ["Market Research", "Analysis", "Vietnam"],
+    "uses": 134,
+    "rating": 4
+  },
+  {
+    "id": "p017",
+    "title": "Kịch bản chatbot CSKH tự động",
+    "category": "automation",
+    "tool": "Claude",
+    "content": "Viết kịch bản chatbot CSKH cho [LOẠI DOANH NGHIỆP] xử lý [LOẠI YÊU CẦU]. Cấu trúc conversation flow: (1) Greeting & intent detection (10 intent categories), (2) FAQ handling — 20 câu hỏi thường gặp với câu trả lời, (3) Complaint handling workflow — empathy → solution → escalation, (4) Order/booking flow step-by-step, (5) Human handoff triggers & transition messages, (6) Follow-up messages post-resolution. Kèm: training data examples, fallback responses, tone guidelines. Tối ưu cho satisfaction rate.",
+    "tags": ["Chatbot", "CSKH", "Automation"],
+    "uses": 267,
+    "rating": 5
+  },
+  {
+    "id": "p018",
+    "title": "Performance review & feedback constructive",
+    "category": "hr",
+    "tool": "Claude",
+    "content": "Viết performance review và feedback constructive cho nhân viên [TÊN/VỊ TRÍ] với context: [KẾT QUẢ CÔNG VIỆC & HÀNH VI QUAN SÁT]. Cấu trúc: (1) Opening — acknowledge effort, (2) Strengths: 3 điểm mạnh cụ thể với ví dụ và business impact, (3) Development areas: 2 điểm cần cải thiện theo SBI model (Situation-Behavior-Impact), (4) Goal setting: SMART goals cho 6 tháng tới, (5) Support needed from manager, (6) Career development conversation. Tone: constructive, growth-oriented, không blame.",
+    "tags": ["Performance Review", "Feedback", "HR"],
+    "uses": 156,
+    "rating": 5
+  },
+  {
+    "id": "p019",
+    "title": "Email sequence nurturing 7 bước",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Viết email nurturing sequence 7 email cho lead [LOẠI KHÁCH HÀNG] đăng ký [LEAD MAGNET]. Email 1 (Ngay): Welcome + deliver value. Email 2 (Ngày 2): Origin story + mission. Email 3 (Ngày 4): Biggest pain point + insight. Email 4 (Ngày 6): Case study + social proof. Email 5 (Ngày 9): Free resource + giá trị thêm. Email 6 (Ngày 12): Soft pitch + offer. Email 7 (Ngày 15): Last chance + FAQ. Mỗi email: subject line, preview text, body 150-200 từ, CTA. Tỷ lệ open/click optimization.",
+    "tags": ["Email Sequence", "Nurturing", "Funnel"],
+    "uses": 223,
+    "rating": 5
+  },
+  {
+    "id": "p020",
+    "title": "Báo cáo tài chính hàng tháng cho CEO",
+    "category": "operations",
+    "tool": "ChatGPT",
+    "content": "Tổng hợp và phân tích báo cáo tài chính tháng [THÁNG/NĂM] từ dữ liệu: [DÁN DỮ LIỆU]. Format CEO Dashboard: (1) P&L summary — Revenue, COGS, Gross margin, OpEx, EBITDA vs target, (2) Cash flow & runway, (3) Unit economics: CAC, LTV, LTV:CAC ratio, payback period, (4) Revenue by channel/product breakdown, (5) Top 5 variances vs budget với explanation, (6) 3 wins tháng này, 3 risks cần address, (7) Next month forecast & assumptions. Kèm visual suggestions cho dashboard.",
+    "tags": ["Finance", "Reporting", "CEO"],
+    "uses": 189,
+    "rating": 4
+  },
+  {
+    "id": "p021",
+    "title": "Xây dựng avatar khách hàng (ICP) chi tiết",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Xây dựng Ideal Customer Profile (ICP) chi tiết cho [SẢN PHẨM/DỊCH VỤ] dựa trên thông tin: [THÔNG TIN HIỆN CÓ VỀ KHÁCH HÀNG]. Bao gồm: (1) Demographics & firmographics, (2) Psychographics: values, beliefs, identity, (3) Pain points: functional, emotional, social theo Jobs-to-be-Done, (4) Goals & aspirations ngắn và dài hạn, (5) Information consumption: kênh, format, người ảnh hưởng, (6) Buying journey & decision triggers, (7) Objections & fears, (8) Vocabulary họ dùng để mô tả vấn đề. Kèm quotes viết theo giọng của họ.",
+    "tags": ["ICP", "Customer Avatar", "Marketing"],
+    "uses": 312,
+    "rating": 5
+  },
+  {
+    "id": "p022",
+    "title": "Closing deal script — xử lý từ chối cuối",
+    "category": "sales",
+    "tool": "Claude",
+    "content": "Tạo closing script xử lý 10 từ chối phổ biến nhất trong giai đoạn closing cho [SẢN PHẨM] ở mức giá [GIÁ]. Từ chối cần cover: (1) Để tôi suy nghĩ thêm, (2) Giá cao quá, (3) Cần bàn với đối tác/sếp, (4) Đang dùng đối thủ rồi, (5) Chưa có budget, (6) Không có thời gian, (7) Tôi tự làm được, (8) Cần thêm thông tin, (9) Thị trường đang khó, (10) Hẹn lại sau. Mỗi từ chối: acknowledge, reframe, counter, ask closing question. Tone: confident không pushy.",
+    "tags": ["Closing", "Objection Handling", "Sales"],
+    "uses": 445,
+    "rating": 5
+  },
+  {
+    "id": "p023",
+    "title": "Google Ads copy & targeting strategy",
+    "category": "marketing",
+    "tool": "ChatGPT",
+    "content": "Tạo chiến lược Google Ads cho [SẢN PHẨM/DỊCH VỤ] với ngân sách [NGÂN SÁCH/THÁNG] tại [THỊ TRƯỜNG]. Bao gồm: (1) Keyword research — 30 từ khóa phân loại Search intent (commercial/transactional/informational), (2) Ad group structure 5 nhóm, (3) Ad copy: 3 RSA headlines + 2 descriptions cho mỗi nhóm, (4) Negative keywords list, (5) Bidding strategy & target CPA/ROAS, (6) Audience targeting & remarketing layers, (7) Landing page recommendations, (8) Extensions cần thiết, (9) 30-ngày optimization checklist.",
+    "tags": ["Google Ads", "PPC", "SEM"],
+    "uses": 234,
+    "rating": 4
+  },
+  {
+    "id": "p024",
+    "title": "Quy trình phỏng vấn & đánh giá ứng viên",
+    "category": "hr",
+    "tool": "Claude",
+    "content": "Thiết kế quy trình phỏng vấn chuẩn cho vị trí [VỊ TRÍ] bao gồm: (1) Scoring rubric — 6 competencies với behavioral indicators từ 1-5, (2) Phone screen questions 10 câu (30 phút), (3) Technical assessment — 3 tasks phù hợp với role, (4) Culture fit interview 15 câu STAR-based, (5) Panel interview guide cho 3 interviewer với câu hỏi không overlap, (6) Reference check script 10 câu, (7) Offer letter template, (8) Rejection email template empathetic. Kèm ATS notes template.",
+    "tags": ["Interview", "Hiring", "HR Process"],
+    "uses": 178,
+    "rating": 5
+  },
+  {
+    "id": "p025",
+    "title": "Thiết kế chương trình loyalty khách hàng",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Thiết kế chương trình loyalty cho [LOẠI DOANH NGHIỆP] với [SỐ KHÁCH HÀNG HIỆN TẠI] khách hàng. Bao gồm: (1) Loyalty mechanics: points/tiers/perks, (2) Tier structure 3-4 cấp với benefits cụ thể từng cấp, (3) Points earning & redemption rules, (4) Gamification elements — challenges, streaks, milestones, (5) Communication strategy: onboarding, birthday, inactive reactivation, (6) Technology requirements — platform, integrations, (7) Unit economics: cost per point, ROI model, (8) Launch campaign 30 ngày. Benchmark với best practices ngành.",
+    "tags": ["Loyalty", "Retention", "CRM"],
+    "uses": 123,
+    "rating": 4
+  },
+  {
+    "id": "p026",
+    "title": "Pitch deck startup gọi vốn 10 slides",
+    "category": "sales",
+    "tool": "Claude",
+    "content": "Viết nội dung pitch deck gọi vốn cho startup [TÊN] trong ngành [NGÀNH] ở giai đoạn [STAGE]. 10 slides theo chuẩn Sequoia: (1) Purpose — 1 sentence, (2) Problem — pain rõ ràng + market evidence, (3) Solution — clear, visual, (4) Why now — market timing, (5) Market size — TAM/SAM/SOM với methodology, (6) Product — demo/screenshots key features, (7) Traction — metrics ấn tượng nhất, (8) Team — unique qualifications, (9) Financials — 3-year projection + use of funds, (10) Ask — amount, terms, use. Kèm investor Q&A prep.",
+    "tags": ["Pitch Deck", "Fundraising", "Startup"],
+    "uses": 167,
+    "rating": 5
+  },
+  {
+    "id": "p027",
+    "title": "Quy trình quản lý OKR theo quý",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Thiết kế hệ thống OKR cho [CÔNG TY/TEAM] với [SỐ NHÂN SỰ] người. Bao gồm: (1) OKR framework training — phân biệt Objective vs Key Result, moonshot vs roofshot, (2) OKR drafting template cho 3 cấp: Company → Team → Individual, (3) Scoring methodology — 0.0 đến 1.0, (4) Weekly check-in format 15 phút, (5) Monthly review template, (6) Quarterly scoring & retrospective agenda, (7) OKR cascading rules, (8) Common mistakes và cách tránh, (9) Tools recommendation. Kèm ví dụ OKR thực tế cho Sales/Marketing/Ops.",
+    "tags": ["OKR", "Strategy", "Operations"],
+    "uses": 212,
+    "rating": 5
+  },
+  {
+    "id": "p028",
+    "title": "Content plan mạng xã hội 1 tháng",
+    "category": "content",
+    "tool": "Claude",
+    "content": "Lập content plan 1 tháng cho [BRAND] trên [PLATFORM: Facebook/Instagram/LinkedIn/TikTok]. Số bài: [TẦN SUẤT/TUẦN]. Bao gồm: (1) Content pillars 4-5 chủ đề phù hợp brand và audience, (2) Content mix: educational 40%, entertainment 30%, promotional 20%, UGC 10%, (3) Lịch đăng từng ngày với: topic, format, hook, caption outline, hashtag set, best time to post, (4) 4 caption mẫu viết đầy đủ, (5) Story/Reel ideas weekly, (6) Engagement tactics: polls, Q&A, challenges. Tối ưu cho algorithm và engagement rate.",
+    "tags": ["Content Plan", "Social Media", "Calendar"],
+    "uses": 489,
+    "rating": 5
+  },
+  {
+    "id": "p029",
+    "title": "Customer success playbook",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Xây dựng Customer Success Playbook cho [SẢN PHẨM SaaS/DỊCH VỤ] với [MÔ HÌNH PRICING]. Bao gồm: (1) Customer journey mapping từ sign-up đến renewal, (2) Health score model — 5-7 metrics với trọng số, (3) Onboarding playbook: 30-60-90 ngày milestones, (4) Expansion playbook: upsell/cross-sell triggers, (5) At-risk intervention: red flag indicators & response SLA, (6) QBR (Quarterly Business Review) template, (7) Churn prevention playbook, (8) NPS/CSAT collection & action plan, (9) Success team KPIs & compensation. Benchmark với industry churn rates.",
+    "tags": ["Customer Success", "SaaS", "Retention"],
+    "uses": 145,
+    "rating": 4
+  },
+  {
+    "id": "p030",
+    "title": "Xây dựng brand identity & brand voice",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Phát triển Brand Identity System cho [BRAND] trong ngành [NGÀNH]. Target: [ĐỐI TƯỢNG]. Bao gồm: (1) Brand purpose, vision, mission, values — 1 câu mỗi loại, (2) Brand personality — 5 traits với do/don't examples, (3) Brand voice & tone: 4 dimensions (Formal↔Casual, Serious↔Playful, Respectful↔Irreverent, Enthusiastic↔Matter-of-fact) với examples, (4) Messaging hierarchy — tagline, elevator pitch (30 giây), full story (2 phút), (5) Language guidelines: power words, banned words, (6) Brand story narrative, (7) Application examples: email, social, ads, CS. Tránh generic corporate speak.",
+    "tags": ["Branding", "Brand Voice", "Identity"],
+    "uses": 234,
+    "rating": 5
+  },
+  {
+    "id": "p031",
+    "title": "Zoom/Google Meet facilitation guide",
+    "category": "operations",
+    "tool": "ChatGPT",
+    "content": "Tạo facilitation guide cho meeting online [LOẠI MEETING: Kickoff/Review/Decision/Brainstorm] với [SỐ NGƯỜI] người trong [THỜI GIAN] phút. Bao gồm: (1) Pre-meeting: agenda template, pre-read materials, setup checklist, (2) Opening 5 phút: ice-breaker, objectives, norms, (3) Main discussion với timeboxing và facilitation techniques cho từng segment, (4) Decision-making framework nếu cần, (5) Brainstorming techniques phù hợp (6 Thinking Hats, Round Robin, etc.), (6) Closing: action items, owner, deadline capture, (7) Meeting notes template, (8) Follow-up email template.",
+    "tags": ["Meeting", "Facilitation", "Productivity"],
+    "uses": 178,
+    "rating": 4
+  },
+  {
+    "id": "p032",
+    "title": "Viết case study khách hàng thuyết phục",
+    "category": "content",
+    "tool": "Claude",
+    "content": "Viết case study về thành công của khách hàng [TÊN KHÁCH HÀNG] khi dùng [SẢN PHẨM/DỊCH VỤ]. Thông tin có: [TÓM TẮT KẾT QUẢ]. Cấu trúc: (1) Headline với số liệu ấn tượng, (2) Executive summary 100 từ, (3) The Challenge — context, pain points, stakes, (4) Why they chose us — decision factors, (5) The Solution — implementation journey, (6) The Results — hard metrics + soft benefits + quote, (7) What's next — future plans, (8) Client quote 2-3 câu impactful. Format cho: Web page, PDF one-pager, và social media snippet. SEO optimized.",
+    "tags": ["Case Study", "Social Proof", "Content"],
+    "uses": 189,
+    "rating": 5
+  },
+  {
+    "id": "p033",
+    "title": "Training material nhân viên mới",
+    "category": "hr",
+    "tool": "Claude",
+    "content": "Tạo training material cho nhân viên mới vị trí [VỊ TRÍ] về chủ đề [PRODUCT/PROCESS/SKILL]. Bao gồm: (1) Learning objectives — 5 outcomes cụ thể sau khi hoàn thành, (2) Pre-assessment — 10 câu để gauge baseline, (3) Content outline chia modules với time estimate, (4) Module 1-3 chi tiết với: explanation, examples, key concepts, (5) Practice exercises mỗi module, (6) Knowledge check quiz 15 câu, (7) Cheat sheet / quick reference card, (8) Resources để học thêm, (9) Certification criteria. Thiết kế cho self-paced learning.",
+    "tags": ["Training", "L&D", "Onboarding"],
+    "uses": 167,
+    "rating": 4
+  },
+  {
+    "id": "p034",
+    "title": "Chiến lược pricing & packaging",
+    "category": "sales",
+    "tool": "Claude",
+    "content": "Tư vấn chiến lược pricing & packaging cho [SẢN PHẨM/DỊCH VỤ] hiện đang ở mức giá [GIÁ HIỆN TẠI], đối thủ giá [GIÁ ĐỐI THỦ]. Bao gồm: (1) Pricing model options: cost-plus vs value-based vs competitive — recommend best fit, (2) 3-tier packaging: Starter/Growth/Enterprise với feature gating logic, (3) Price anchoring strategy, (4) Annual vs monthly discount structure, (5) Add-on & upsell opportunities, (6) Pricing page copy & positioning, (7) Pricing objection handling, (8) Price increase strategy nếu cần, (9) Free trial vs freemium analysis. Kèm financial impact model.",
+    "tags": ["Pricing", "Packaging", "Revenue"],
+    "uses": 212,
+    "rating": 5
+  },
+  {
+    "id": "p035",
+    "title": "SEO content brief cho bài viết chuẩn E-E-A-T",
+    "category": "content",
+    "tool": "Claude",
+    "content": "Tạo SEO content brief đầy đủ cho bài viết về [CHỦ ĐỀ] nhắm từ khóa chính [KEYWORD] (volume: [VOLUME], KD: [KD]). Bao gồm: (1) Search intent analysis — what does searcher really want, (2) Competitor top 5 analysis — content gaps, word count, structure, (3) Outline đề xuất: H1, H2s, H3s với key points, (4) E-E-A-T signals cần thêm: author credentials, first-hand experience, expert quotes, (5) Internal linking opportunities, (6) Featured snippet optimization strategy, (7) FAQs từ People Also Ask (10 câu), (8) Image/video recommendations, (9) Word count & readability target, (10) Meta title & description variants.",
+    "tags": ["SEO", "Content Brief", "E-E-A-T"],
+    "uses": 345,
+    "rating": 5
+  },
+  {
+    "id": "p036",
+    "title": "Zapier automation cho quy trình sales",
+    "category": "automation",
+    "tool": "Claude",
+    "content": "Thiết kế Zapier automation cho sales workflow của [CRM: HubSpot/Salesforce/Pipedrive] với các trigger events: New Lead, Deal Stage Change, Deal Won/Lost. Automations cần xây: (1) New lead → Slack notification + task tạo tự động, (2) Demo scheduled → Calendar event + reminder sequence, (3) Proposal sent → Follow-up email sequence trigger, (4) Deal won → Onboarding kickoff + invoice, (5) Deal lost → Lost reason survey + re-engagement sequence. Mỗi Zap: trigger, filter conditions, action steps, error handling. Estimate time saved/tháng.",
+    "tags": ["Zapier", "CRM", "Sales Automation"],
+    "uses": 198,
+    "rating": 4
+  },
+  {
+    "id": "p037",
+    "title": "Copywriting landing page high-converting",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Viết copy landing page high-converting cho [OFFER: Product/Service/Lead Magnet] nhắm đến [AUDIENCE] với mục tiêu [GOAL: Sign-up/Purchase/Demo]. Cấu trúc AIDA+ framework: (1) Hero section: headline (value + outcome) + subheadline + primary CTA, (2) Social proof bar — logos, numbers, (3) Problem agitation — 3 pain points, (4) Solution reveal — how it works (3 steps), (5) Features → Benefits transformation (6 điểm), (6) Social proof deep dive — testimonials với before/after, (7) Objection crusher FAQ, (8) Guarantee, (9) Final CTA với urgency/scarcity, (10) Trust signals footer. Kèm A/B test suggestions.",
+    "tags": ["Landing Page", "Copywriting", "Conversion"],
+    "uses": 423,
+    "rating": 5
+  },
+  {
+    "id": "p038",
+    "title": "Kế hoạch tuyển dụng quarterly",
+    "category": "hr",
+    "tool": "Claude",
+    "content": "Xây dựng recruitment plan Q[X]/[NĂM] cho [CÔNG TY] cần tuyển [SỐ VỊ TRÍ] positions. Bao gồm: (1) Headcount plan — role, priority level, budget, timeline, (2) Sourcing strategy cho từng role: job boards, LinkedIn, referral, headhunting, (3) Employer branding touchpoints — JD template, careers page update, (4) Candidate pipeline management: stages, SLA từng stage, (5) Interview process standardization, (6) Offer acceptance optimization tactics, (7) Recruitment metrics: time-to-fill, cost-per-hire, quality-of-hire, (8) Agency vs in-house tradeoffs, (9) Onboarding readiness checklist. Kèm hiring tracker template.",
+    "tags": ["Recruitment", "Talent Acquisition", "HR Planning"],
+    "uses": 134,
+    "rating": 4
+  },
+  {
+    "id": "p039",
+    "title": "Xây dựng hệ thống CRM từ đầu",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Thiết kế hệ thống CRM cho [LOẠI DOANH NGHIỆP] với [SỐ SALES REP] sales rep và [SỐ KHÁCH HÀNG] khách hàng. Bao gồm: (1) CRM requirements: must-have vs nice-to-have features, (2) Tool evaluation: HubSpot vs Salesforce vs Pipedrive vs Google Sheets — recommendation với rationale, (3) Data model: Contacts, Companies, Deals, Activities — custom fields cần thiết, (4) Pipeline stages & exit criteria, (5) Lead scoring model, (6) Activity tracking & reporting dashboard, (7) Integration map với existing tools, (8) Data migration plan, (9) Team training roadmap, (10) 90-ngày adoption plan. Kèm implementation cost estimate.",
+    "tags": ["CRM", "Sales Ops", "Implementation"],
+    "uses": 156,
+    "rating": 5
+  },
+  {
+    "id": "p040",
+    "title": "Phân tích và tối ưu conversion funnel",
+    "category": "analysis",
+    "tool": "ChatGPT",
+    "content": "Phân tích conversion funnel từ dữ liệu: [DỮ LIỆU FUNNEL: Visitors, Leads, MQL, SQL, Opportunities, Closed Won]. Yêu cầu: (1) Funnel visualization với conversion rates từng bước, (2) Benchmark so với industry average, (3) Identify biggest leak — stage nào mất nhiều nhất và tại sao (hypotheses), (4) Quick wins có thể tăng conversion ngay trong 30 ngày, (5) A/B test roadmap 90 ngày — priority theo expected impact, (6) Attribution analysis — kênh nào đóng góp best quality leads, (7) Customer journey map với touchpoints, (8) Revenue impact model — nếu tăng X% ở mỗi bước. Actionable recommendations.",
+    "tags": ["Funnel", "Conversion", "Analytics"],
+    "uses": 234,
+    "rating": 5
+  },
+  {
+    "id": "p041",
+    "title": "Thư cảm ơn & follow-up sau gặp khách hàng",
+    "category": "sales",
+    "tool": "Claude",
+    "content": "Viết email follow-up sau meeting với khách hàng [TÊN] về chủ đề [CHỦ ĐỀ MEETING]. Đã discuss: [TÓM TẮT MEETING]. Next step đã đồng ý: [NEXT STEPS]. Cấu trúc: (1) Subject line personalized, (2) Thank you + recap meeting highlights 3 điểm, (3) Summary cam kết của hai bên, (4) Resources/materials đề cập trong meeting (nếu có), (5) Clear next action với deadline cụ thể, (6) Calendar link để book next meeting, (7) Mở cửa cho questions. Tone: professional nhưng friendly. Ngắn gọn dưới 200 từ. Tránh fluff.",
+    "tags": ["Follow-up", "Email", "Sales"],
+    "uses": 567,
+    "rating": 5
+  },
+  {
+    "id": "p042",
+    "title": "Xây dựng knowledge base & FAQ",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Tạo cấu trúc Knowledge Base và FAQ cho [SẢN PHẨM/DỊCH VỤ] nhắm đến [ĐỐI TƯỢNG: customers/employees/partners]. Bao gồm: (1) Information architecture — categories và subcategories, (2) 50 FAQ questions từ phổ biến đến specialized với câu trả lời concise, (3) Troubleshooting guides dạng decision tree cho 5 issues phổ biến, (4) How-to articles: 10 topics với step-by-step instructions, (5) Glossary 30 terms, (6) Template cho writing guidelines — tone, structure, length, (7) Search optimization — meta data, tagging taxonomy, (8) Maintenance cadence & owner assignment. Tool recommendation: Notion vs Confluence vs Help Scout.",
+    "tags": ["Knowledge Base", "FAQ", "Documentation"],
+    "uses": 145,
+    "rating": 4
+  },
+  {
+    "id": "p043",
+    "title": "Instagram Reels script & hook ideas",
+    "category": "content",
+    "tool": "ChatGPT",
+    "content": "Tạo 10 script ideas cho Instagram Reels về chủ đề [NGÀNH/TOPIC] cho [BRAND/CREATOR]. Mỗi idea bao gồm: Hook dòng đầu (pattern interrupt/curiosity/challenge/relatable moment), Format (Tutorial/POV/List/Transformation/Behind-scenes/React/Trend), Script 30-60 giây với cues cho cut/transition, Text overlay suggestions, Audio recommendations (trending sounds). Viết đầy đủ 3 scripts hay nhất trong đó có: 1 educational, 1 entertaining, 1 promotional. Thêm engagement CTA cuối mỗi reel.",
+    "tags": ["Instagram", "Reels", "Video Script"],
+    "uses": 389,
+    "rating": 5
+  },
+  {
+    "id": "p044",
+    "title": "Thiết kế chương trình đào tạo sales",
+    "category": "hr",
+    "tool": "Claude",
+    "content": "Thiết kế Sales Training Program toàn diện cho team [SỐ NGƯỜI] sales rep với level [BEGINNER/MID/SENIOR]. Curriculum bao gồm: Module 1 — Product Mastery (8 tiếng), Module 2 — ICP & Discovery Skills (6 tiếng), Module 3 — Pitch & Demo skills (8 tiếng), Module 4 — Objection handling (4 tiếng), Module 5 — Negotiation & Closing (6 tiếng), Module 6 — CRM & Sales Ops (4 tiếng). Mỗi module: learning objectives, content outline, role-play scenarios, assessment rubric. Kèm: buddy system setup, shadowing program, 90-ngày ramp plan với milestones.",
+    "tags": ["Sales Training", "L&D", "Sales Enablement"],
+    "uses": 167,
+    "rating": 5
+  },
+  {
+    "id": "p045",
+    "title": "Email newsletter tuần — format hấp dẫn",
+    "category": "content",
+    "tool": "Claude",
+    "content": "Viết newsletter tuần [SỐ] cho [BRAND/CREATOR] về chủ đề [NICHE]. Subscribers: [SỐ]. Format AIFUN Newsletter: (1) Subject line A/B options 3 phiên bản, (2) Preview text, (3) Hero intro — 50 từ gợi kỳ vọng cho issue này, (4) Main story/insight — 200 từ với unique take, (5) Quick hits — 3-5 bullet news/tips/resources đáng chú ý, (6) Deep dive — tool/book/framework đáng dùng với mini-review, (7) Community/subscriber spotlight, (8) Weekly challenge, (9) Closing — 30 từ personal, (10) PS — bonus link hoặc teaser số tới. Kèm open rate optimization tips.",
+    "tags": ["Newsletter", "Email", "Content"],
+    "uses": 256,
+    "rating": 5
+  },
+  {
+    "id": "p046",
+    "title": "Xây dựng chính sách nội bộ công ty",
+    "category": "hr",
+    "tool": "Claude",
+    "content": "Soạn thảo chính sách [TÊN CHÍNH SÁCH: WFH/Expense/Leave/Code of Conduct] cho công ty [QUY MÔ] trong ngành [NGÀNH]. Cấu trúc: (1) Purpose & scope, (2) Definitions, (3) Policy statement — quy định rõ ràng, cụ thể, (4) Eligibility & exceptions, (5) Procedures & process flow, (6) Roles & responsibilities (HR/Manager/Employee), (7) Violations & consequences, (8) Review & update schedule, (9) Acknowledgment form. Ngôn ngữ: clear, unambiguous, legally-aware cho Việt Nam. Kèm FAQ nhân viên hỏi nhiều nhất.",
+    "tags": ["HR Policy", "Compliance", "Internal"],
+    "uses": 123,
+    "rating": 4
+  },
+  {
+    "id": "p047",
+    "title": "Google Analytics 4 audit & insights",
+    "category": "analysis",
+    "tool": "ChatGPT",
+    "content": "Phân tích Google Analytics 4 data cho website [DOMAIN] từ [DATE RANGE]. Dữ liệu hiện có: [TÓM TẮT METRICS CHÍNH]. Yêu cầu: (1) Traffic overview — sessions, users, bounce rate trend, (2) Acquisition analysis — top channels và cost-effectiveness, (3) Behavior flow — top landing pages, exit pages, engagement metrics, (4) Conversion analysis — goal completions, funnel drop-offs, (5) Audience segments — demographics, device, geo insights, (6) Speed & Core Web Vitals impact, (7) 10 quick wins để improve performance trong 30 ngày, (8) GA4 event tracking recommendations chưa setup. Dashboard setup guide.",
+    "tags": ["Analytics", "GA4", "Website"],
+    "uses": 189,
+    "rating": 4
+  },
+  {
+    "id": "p048",
+    "title": "Xây dựng hệ thống KPI công ty",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Thiết kế hệ thống KPI toàn diện cho [CÔNG TY] trong ngành [NGÀNH] với mục tiêu [NĂM NĂM]. Framework: Company Scorecard với 4 perspectives (Financial, Customer, Internal Process, Learning & Growth). Mỗi perspective: (1) 3-5 strategic objectives, (2) KPIs đo lường objective đó, (3) Target, baseline, frequency, owner, (4) Leading vs lagging indicators phân loại, (5) Data source & collection method, (6) Dashboard layout recommendation. Kèm: cascading KPI từ company → department → individual, review cadence, và common KPI mistakes cần tránh.",
+    "tags": ["KPI", "Performance Management", "Strategy"],
+    "uses": 267,
+    "rating": 5
+  },
+  {
+    "id": "p049",
+    "title": "Product launch plan go-to-market",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Tạo Go-to-Market plan cho launch [TÊN SẢN PHẨM/TÍNH NĂNG] dự kiến ngày [DATE]. Bao gồm: (1) Positioning statement — cho ai, vấn đề gì, giải pháp gì, khác gì đối thủ, (2) Target segments & ICP, (3) Launch tiers: Soft launch → Beta → Full launch với criteria mỗi tier, (4) Channel strategy: owned + earned + paid mix, (5) Pre-launch: waitlist, teaser campaign, PR outreach, (6) Launch week playbook ngày-theo-ngày, (7) Post-launch: feedback loop, iteration plan, (8) Success metrics & monitoring, (9) Team RACI, (10) Budget breakdown. Kèm risk register & contingency.",
+    "tags": ["Product Launch", "GTM", "Marketing"],
+    "uses": 198,
+    "rating": 5
+  },
+  {
+    "id": "p050",
+    "title": "Phân tích customer feedback & NPS",
+    "category": "analysis",
+    "tool": "Claude",
+    "content": "Phân tích [SỐ] customer feedback/NPS responses cho [SẢN PHẨM/DỊCH VỤ]. Dữ liệu: [DÁN FEEDBACK HOẶC MÔ TẢ]. Yêu cầu: (1) NPS segmentation — Promoters/Passives/Detractors breakdown, (2) Sentiment analysis theo theme: Product/Support/Price/UX/Onboarding, (3) Top 5 praised aspects và evidences, (4) Top 5 pain points với frequency và severity, (5) Verbatim quotes impactful nhất cho mỗi theme, (6) Root cause analysis cho issues, (7) Quick wins vs long-term fixes, (8) Benchmark vs industry NPS, (9) Prioritized action plan với owner, (10) Suggested follow-up questions cho next survey.",
+    "tags": ["NPS", "Customer Feedback", "CX"],
+    "uses": 145,
+    "rating": 4
+  },
+  {
+    "id": "p051",
+    "title": "Viết grant proposal tài trợ dự án",
+    "category": "content",
+    "tool": "Claude",
+    "content": "Viết grant proposal cho dự án [TÊN DỰ ÁN] xin tài trợ [SỐ TIỀN] từ [TỔ CHỨC/QUỸ]. Cấu trúc chuẩn: (1) Executive Summary 1 trang — problem, solution, impact, budget, (2) Organization Background & credibility, (3) Problem Statement — data-backed, urgent, (4) Project Description: objectives, methodology, timeline, (5) Evaluation Plan — how success is measured, (6) Budget Narrative — line item justification, (7) Sustainability Plan — sau khi hết grant, (8) Team qualifications, (9) Appendices list. Kèm logic model/theory of change visual. Tone: compelling, evidence-based, mission-driven.",
+    "tags": ["Grant Writing", "Proposal", "NGO"],
+    "uses": 89,
+    "rating": 4
+  },
+  {
+    "id": "p052",
+    "title": "Negotiation script mua hàng với supplier",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Chuẩn bị negotiation strategy và script khi đàm phán với supplier về [SẢN PHẨM/DỊCH VỤ]. Current terms: [ĐIỀU KHOẢN HIỆN TẠI]. Target: [MỤC TIÊU ĐÀM PHÁN]. Bao gồm: (1) BATNA analysis — best alternative nếu deal fail, (2) Supplier's likely BATNA, (3) ZOPA (Zone of Possible Agreement), (4) Opening offer strategy và rationale, (5) Concession plan — ưu tiên theo thứ tự, (6) Script cho opening, discovery, proposal, counter, close, (7) Power moves khi bế tắc, (8) Deal terms checklist: price, payment terms, MOQ, lead time, SLA, (9) Red lines — không nhượng bộ điều gì.",
+    "tags": ["Negotiation", "Procurement", "Operations"],
+    "uses": 134,
+    "rating": 5
+  },
+  {
+    "id": "p053",
+    "title": "Xây dựng affiliate/partnership program",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Thiết kế Affiliate & Partnership Program cho [BRAND] với [MÔ HÌNH KINH DOANH]. Bao gồm: (1) Program structure: commission rates, tiers, payment schedule, (2) Affiliate recruitment strategy: ideal partner profile, sourcing channels, (3) Application & vetting process, (4) Partner portal requirements: dashboard, resources, tracking, (5) Marketing materials package: banners, email templates, social copy, (6) Training & onboarding cho affiliates, (7) Communication cadence: newsletter, updates, incentives, (8) Fraud prevention measures, (9) Performance tiers & bonus structure, (10) Legal requirements: FTC disclosure, agreement template. Benchmark commissions ngành.",
+    "tags": ["Affiliate", "Partnership", "Growth"],
+    "uses": 112,
+    "rating": 4
+  },
+  {
+    "id": "p054",
+    "title": "Phân tích hành vi người dùng UX",
+    "category": "analysis",
+    "tool": "Claude",
+    "content": "Phân tích user behavior cho [WEBSITE/APP] từ data [HEATMAP/SESSION RECORDING/ANALYTICS]. Context: [MÔ TẢ PRODUCT & USERS]. Yêu cầu: (1) User flow analysis — common paths và drop-off points, (2) Rage clicks & frustration signals, (3) Scroll depth analysis — where users stop, (4) Form abandonment analysis, (5) Mobile vs Desktop behavior differences, (6) Feature adoption rates, (7) Aha moment identification, (8) 10 UX issues prioritized by impact, (9) A/B test hypotheses với predicted uplift, (10) Quick UX wins không cần dev, (11) User interview questions để validate findings. Jobs-to-be-Done framework.",
+    "tags": ["UX", "User Behavior", "Product"],
+    "uses": 156,
+    "rating": 5
+  },
+  {
+    "id": "p055",
+    "title": "Crisis communication response plan",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Soạn thảo Crisis Communication Plan cho tình huống [MÔ TẢ KHỦNG HOẢNG] ảnh hưởng đến [BRAND/CÔNG TY]. Bao gồm: (1) Immediate response (0-2 tiếng): holding statement, internal comms, stakeholder list, (2) 24-hour response: full statement, Q&A prep, spokesperson guidance, (3) Communication channels: press release, social media, email to customers, (4) Dark site/crisis page content, (5) Social media response templates cho các loại comments, (6) Media inquiry handling, (7) Employee communication, (8) Recovery messaging timeline, (9) Monitoring & escalation protocol, (10) Post-crisis review template. Tone: transparent, accountable, solution-focused.",
+    "tags": ["Crisis Communication", "PR", "Brand"],
+    "uses": 89,
+    "rating": 5
+  },
+  {
+    "id": "p056",
+    "title": "Gamification design cho app/platform",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Thiết kế gamification system cho [APP/PLATFORM] nhằm tăng [METRIC: DAU/Engagement/Retention]. User segment: [MÔ TẢ USERS]. Bao gồm: (1) Core gameplay loop — action, reward, progress, (2) Points & currency system: earn rates, redemption options, (3) Levels & progression: 10 levels với unlock rewards, (4) Achievements & badges: 30 badges across categories, (5) Leaderboards: design & anti-toxicity measures, (6) Streaks & daily engagement mechanics, (7) Social features: guilds, gifting, challenges, (8) Notification strategy cho each mechanic, (9) Anti-gaming measures, (10) Metrics to track success. Octalysis framework analysis.",
+    "tags": ["Gamification", "Product", "Engagement"],
+    "uses": 134,
+    "rating": 4
+  },
+  {
+    "id": "p057",
+    "title": "Report marketing tháng cho client",
+    "category": "marketing",
+    "tool": "ChatGPT",
+    "content": "Tạo monthly marketing report cho client [TÊN CLIENT] về [DỊCH VỤ: Social Media/PPC/SEO]. Data tháng [X]: [DÁN DATA]. Cấu trúc report: (1) Executive Summary — 3 wins, 2 challenges, 1 key insight, (2) Performance vs KPIs table, (3) Channel performance breakdown với explanations, (4) Campaign highlights — best performing content/ad với why it worked, (5) Budget spend & efficiency, (6) Audience insights — what we learned about customers, (7) Competitive observations, (8) Next month plan — 3 priorities + budget allocation, (9) Appendix data tables. Tone: consultative, honest về underperformance.",
+    "tags": ["Marketing Report", "Analytics", "Client"],
+    "uses": 234,
+    "rating": 4
+  },
+  {
+    "id": "p058",
+    "title": "Xây dựng community & forum strategy",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Phát triển Community Strategy cho [BRAND/PRODUCT] nhằm xây dựng engaged community [TARGET: 1000/5000/10000 members] trong [THỜI GIAN]. Platform: [Facebook Group/Discord/Slack/Circle]. Bao gồm: (1) Community positioning & purpose statement, (2) Member personas — 3 types + motivations, (3) Governance rules & moderation guidelines, (4) Content programming: pillars, cadence, formats, (5) Engagement tactics: AMAs, challenges, member spotlight, (6) Onboarding journey cho new members, (7) Power user identification & cultivation, (8) Monetization opportunities, (9) Metrics: size, engagement rate, NPS, (10) Launch playbook 30 ngày. Community health framework.",
+    "tags": ["Community", "Forum", "Growth"],
+    "uses": 123,
+    "rating": 4
+  },
+  {
+    "id": "p059",
+    "title": "Technical requirements document",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Viết Technical Requirements Document (TRD) cho tính năng [TÊN TÍNH NĂNG] của [SẢN PHẨM]. Business context: [VẤN ĐỀ CẦN GIẢI QUYẾT]. Cấu trúc: (1) Overview & business justification, (2) User stories theo format Given-When-Then, (3) Functional requirements — numbered, testable, (4) Non-functional requirements: performance, security, scalability, (5) API specifications nếu có, (6) Data model changes, (7) Integration requirements, (8) Error states & edge cases, (9) Out of scope — explicitly stated, (10) Acceptance criteria per story, (11) Testing scenarios, (12) Dependencies & risks. Review sign-off section.",
+    "tags": ["Technical", "Product", "Documentation"],
+    "uses": 145,
+    "rating": 4
+  },
+  {
+    "id": "p060",
+    "title": "Tổng hợp meeting notes & action items",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Tổng hợp meeting notes từ transcript/ghi chú sau: [DÁN NỘI DUNG]. Meeting: [TÊN MEETING], ngày: [NGÀY], attendees: [DS THAM DỰ]. Yêu cầu output: (1) Meeting summary 3-5 câu executive brief, (2) Key decisions made với context, (3) Action items table: Task | Owner | Deadline | Priority | Status, (4) Open questions & parking lot, (5) Next meeting agenda draft, (6) Risks & blockers identified, (7) Follow-up email template để gửi cho attendees. Format: scannable, bullet points, dùng bold cho key items. Thêm emoji để dễ đọc nếu culture informal.",
+    "tags": ["Meeting Notes", "Action Items", "Productivity"],
+    "uses": 678,
+    "rating": 5
+  },
+  {
+    "id": "p061",
+    "title": "Chiến lược influencer marketing",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Xây dựng Influencer Marketing Strategy cho [BRAND] với ngân sách [NGÂN SÁCH/QUÝ]. Campaign objective: [MỤC TIÊU: Awareness/Sales/Community]. Bao gồm: (1) Influencer tiers strategy: Mega/Macro/Micro/Nano — recommended mix & rationale, (2) ICP cho influencer — niche, engagement rate, audience demographics, (3) Outreach template personalized, (4) Brief template: brand guidelines, do/don'ts, messaging key, content formats, (5) Compensation models: flat fee vs commission vs gifting, (6) Contract key clauses, (7) Content approval process, (8) Performance metrics: EMV, reach, conversions, (9) Influencer research tools. Kèm Việt Nam influencer landscape overview.",
+    "tags": ["Influencer", "KOL", "Marketing"],
+    "uses": 267,
+    "rating": 5
+  },
+  {
+    "id": "p062",
+    "title": "Due diligence checklist M&A",
+    "category": "analysis",
+    "tool": "Claude",
+    "content": "Tạo Due Diligence Checklist toàn diện cho việc [MUA LẠI/ĐẦU TƯ VÀO] [LOẠI CÔNG TY] trong ngành [NGÀNH] với deal size [GIÁ TRỊ]. Categories: (1) Financial DD: 3 năm financials, off-balance sheet items, working capital, capex, (2) Legal DD: corporate structure, IP, contracts, litigation, (3) Commercial DD: market position, customer concentration, churn, pipeline, (4) Operational DD: processes, systems, team capabilities, (5) HR DD: key people, retention risk, culture, compensation, (6) Tech DD: architecture, tech debt, security, scalability, (7) Tax DD: compliance history, exposures, (8) ESG considerations. Kèm red flag indicators mỗi category.",
+    "tags": ["M&A", "Due Diligence", "Finance"],
+    "uses": 78,
+    "rating": 4
+  },
+  {
+    "id": "p063",
+    "title": "Câu chuyện thương hiệu (brand story) hấp dẫn",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Viết brand story hấp dẫn cho [BRAND] dựa trên thông tin: [CONTEXT VỀ FOUNDER, ORIGIN, MISSION]. Cấu trúc hero's journey: (1) The world before — trạng thái ngành trước khi brand tồn tại, (2) The call — vấn đề founder gặp phải hoặc cơ hội nhận ra, (3) The struggle — obstacles overcome, (4) The transformation — discovery và solution, (5) The mission — tại sao chúng tôi tồn tại, (6) The future — brand đang đi đến đâu. Formats: long-form (500 từ cho About page), medium (150 từ cho bio), short (50 từ cho tagline). Authentic, không quá polished.",
+    "tags": ["Brand Story", "About Us", "Copywriting"],
+    "uses": 234,
+    "rating": 5
+  },
+  {
+    "id": "p064",
+    "title": "Customer journey map chi tiết",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Tạo Customer Journey Map cho [ICP PERSONA] khi mua [SẢN PHẨM/DỊCH VỤ]. Stages: Awareness → Consideration → Decision → Onboarding → Usage → Advocacy. Mỗi stage: (1) Customer goals — họ muốn gì, (2) Touchpoints — nơi gặp brand, (3) Actions — họ làm gì, (4) Thoughts — họ nghĩ gì, (5) Emotions — cảm xúc (1-10 scale), (6) Pain points — friction, (7) Brand actions cần làm, (8) Metrics để đo, (9) Improvement opportunities. Format: bảng hoặc visual text map. Kèm job-to-be-done statements cho mỗi stage.",
+    "tags": ["Customer Journey", "CX", "UX"],
+    "uses": 189,
+    "rating": 5
+  },
+  {
+    "id": "p065",
+    "title": "Lập trình Google Apps Script tự động hóa",
+    "category": "automation",
+    "tool": "Claude",
+    "content": "Viết Google Apps Script để tự động hóa: [MÔ TẢ TASK CỤ THỂ] trong Google [Sheets/Docs/Gmail/Calendar]. Context: [SETUP HIỆN TẠI, DATA STRUCTURE]. Yêu cầu code: (1) Complete, runnable script với comments tiếng Việt, (2) Error handling với try/catch, (3) Logging với Logger.log cho debug, (4) Menu trigger hoặc time-based trigger theo yêu cầu, (5) Configuration section ở đầu để dễ customize, (6) Rate limiting để tránh quota exceeded. Kèm: (7) Setup instructions step-by-step, (8) Test cases, (9) Common issues & troubleshooting guide. Dùng modern ES6+ syntax.",
+    "tags": ["Google Apps Script", "Automation", "Google Workspace"],
+    "uses": 312,
+    "rating": 5
+  },
+  {
+    "id": "p066",
+    "title": "Đánh giá & nâng cấp chiến lược SEO",
+    "category": "marketing",
+    "tool": "Perplexity",
+    "content": "Thực hiện SEO audit toàn diện cho website [DOMAIN]. Tools data có: [GA4/GSC/Ahrefs/SEMrush]. Yêu cầu: (1) Technical SEO: crawlability, indexability, Core Web Vitals, mobile-friendliness, structured data, (2) On-page: title tags, meta, H1-H6 structure, internal linking, (3) Content: thin content, duplicate, cannibalization, content gaps, (4) Off-page: backlink profile — DA, toxic links, (5) Local SEO nếu applicable, (6) Competitor SEO comparison, (7) Keyword ranking opportunities — low hanging fruit, (8) Priority fix list: Critical/High/Medium/Low với time estimate, (9) 6-tháng SEO roadmap. Expected traffic uplift projection.",
+    "tags": ["SEO", "Website Audit", "Organic"],
+    "uses": 198,
+    "rating": 4
+  },
+  {
+    "id": "p067",
+    "title": "Quy trình xử lý khiếu nại khách hàng",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Xây dựng quy trình xử lý khiếu nại khách hàng chuẩn cho [LOẠI DOANH NGHIỆP]. Bao gồm: (1) Complaint intake channels: hotline, email, chat, social — SLA cho mỗi kênh, (2) Triage & categorization matrix: loại khiếu nại × severity → priority, (3) Response templates cho 10 loại khiếu nại phổ biến: empathy → solution → compensation, (4) Escalation path: L1/L2/L3 với trigger criteria, (5) Root cause analysis template, (6) Compensation policy guidelines, (7) Closure & follow-up process, (8) Reporting: daily/weekly dashboard, trends, (9) Continuous improvement loop: từ complaints → product/process improvements, (10) Staff training guide.",
+    "tags": ["Customer Service", "Complaint Handling", "CX"],
+    "uses": 256,
+    "rating": 5
+  },
+  {
+    "id": "p068",
+    "title": "Vận hành remote team hiệu quả",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Xây dựng Operating Model cho remote team [SỐ NGƯỜI] trong [MÚLTI TIMEZONE: Việt Nam/USA/EU]. Bao gồm: (1) Communication norms: async-first principles, sync meeting policy, response time SLAs, (2) Meeting cadence: daily standup (15'), weekly team sync (60'), monthly all-hands, (3) Tools stack: video, chat, project mgmt, docs, calendar — với usage guidelines, (4) Documentation culture: làm gì cần document, where, format, (5) Onboarding remote employee checklist, (6) Engagement & culture building activities, (7) Performance management trong remote context, (8) Timezone overlap optimization, (9) Security & data protection, (10) Offboarding checklist. Remote work playbook.",
+    "tags": ["Remote Work", "Operations", "Team Management"],
+    "uses": 178,
+    "rating": 5
+  },
+  {
+    "id": "p069",
+    "title": "Pitch sản phẩm tại event/triển lãm",
+    "category": "sales",
+    "tool": "Claude",
+    "content": "Tạo event pitch toolkit cho [SẢN PHẨM] tại [LOẠI EVENT: Trade show/Conference/Demo day]. Bao gồm: (1) 30-second elevator pitch (memorizable), (2) 2-minute demo script với key messages, (3) 5-minute deep-dive script, (4) Qualification questions để identify hot leads, (5) Objection handling cards — 5 phổ biến nhất, (6) Leave-behind materials content, (7) Business card / QR code follow-up sequence, (8) Booth engagement tactics để attract traffic, (9) Lead capture form fields, (10) Post-event follow-up sequence: email 24h, 72h, 1 week. Kèm body language & delivery tips.",
+    "tags": ["Event", "Pitch", "Sales"],
+    "uses": 145,
+    "rating": 4
+  },
+  {
+    "id": "p070",
+    "title": "Thiết lập hệ thống báo cáo kinh doanh",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Thiết kế Business Intelligence & Reporting System cho [CÔNG TY]. Bao gồm: (1) Reporting hierarchy: CEO → VP → Manager → Individual, (2) Report types: Daily pulse (5 mins), Weekly review (30 mins), Monthly deep-dive (2 hrs), Quarterly strategy (half day), (3) Metrics framework: North Star Metric + 10 key metrics với definitions, (4) Data sources & integration: CRM, Finance, Marketing, Operations, (5) Dashboard design principles — cho mỗi level, (6) Data governance: ownership, quality standards, access control, (7) Tool recommendations: Google Data Studio vs Power BI vs Tableau, (8) Reporting cadence & distribution, (9) Alert system cho anomalies. Template pack.",
+    "tags": ["Reporting", "BI", "Dashboard"],
+    "uses": 167,
+    "rating": 4
+  },
+  {
+    "id": "p071",
+    "title": "Xây dựng pricing page thuyết phục",
+    "category": "sales",
+    "tool": "Claude",
+    "content": "Viết nội dung pricing page cho [SẢN PHẨM SaaS/Service] với [SỐ GÓI] gói. Context: competitors: [ĐỐI THỦ], target: [AUDIENCE]. Bao gồm: (1) Page headline & subheadline, (2) Pricing table copy: plan names, taglines, price & billing, feature list (benefit-focused language), CTA buttons, (3) Most popular/recommended badge placement, (4) Annual vs monthly toggle copy, (5) FAQ section 8 câu về pricing, (6) Money-back guarantee copy, (7) Enterprise/custom plan CTA, (8) Social proof section (logos + 1 key testimonial), (9) Comparison table vs competitors. Tránh: confusing features, hidden fees language, jargon.",
+    "tags": ["Pricing Page", "SaaS", "Conversion"],
+    "uses": 189,
+    "rating": 5
+  },
+  {
+    "id": "p072",
+    "title": "PR press release sản phẩm/sự kiện",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Viết press release chuyên nghiệp về [TÊN SỰ KIỆN/SẢN PHẨM] của [CÔNG TY]. Thông tin cần điền: [FACTS, QUOTES, STATS]. Cấu trúc AP style: (1) Headline — newsworthy, SEO-friendly, (2) Dateline, (3) Lead paragraph — 5W1H trong 40 từ, (4) Second paragraph — detail & context, (5) Body — supporting facts, (6) Quote from executive (2-3 câu), (7) Quote from partner/customer nếu có, (8) Boilerplate về công ty (75 từ), (9) Contact information, (10) ### end marker. Kèm: pitch email cho journalist, social media adaptation, internal announcement version.",
+    "tags": ["PR", "Press Release", "Communications"],
+    "uses": 112,
+    "rating": 4
+  },
+  {
+    "id": "p073",
+    "title": "Thiết kế loyalty program cho B2B",
+    "category": "sales",
+    "tool": "Claude",
+    "content": "Thiết kế B2B Loyalty & Rewards Program cho [SẢN PHẨM/DỊCH VỤ] nhắm đến khách hàng doanh nghiệp [SEGMENT]. Bao gồm: (1) Program objectives: retention, expansion, advocacy, (2) Tier structure: Bronze/Silver/Gold/Platinum với revenue thresholds, (3) Benefits per tier: pricing discounts, service SLAs, training access, exec access, co-marketing, (4) Points/credits earning mechanism, (5) Partner ecosystem perks, (6) Relationship manager assignment thresholds, (7) QBR (Quarterly Business Review) cadence per tier, (8) Annual appreciation events, (9) Churn prevention triggers, (10) Program ROI model. Customer Advisory Board setup.",
+    "tags": ["B2B Loyalty", "Account Management", "Retention"],
+    "uses": 98,
+    "rating": 4
+  },
+  {
+    "id": "p074",
+    "title": "Phân tích rủi ro dự án & mitigation plan",
+    "category": "analysis",
+    "tool": "Claude",
+    "content": "Thực hiện Risk Assessment cho dự án [TÊN DỰ ÁN]. Project context: [MÔ TẢ DỰ ÁN, TIMELINE, BUDGET, TEAM]. Bao gồm: (1) Risk identification — brainstorm 20+ risks theo categories: Technical/Commercial/Operational/Legal/Financial/Team, (2) Risk matrix: Probability × Impact scoring, (3) Top 10 risks prioritized với risk scores, (4) Mitigation strategies cho mỗi risk: Avoid/Transfer/Mitigate/Accept, (5) Contingency plans cho top 5 risks, (6) Early warning indicators (triggers), (7) Risk owner assignment, (8) Review cadence, (9) Risk register template ongoing. Kèm risk appetite statement.",
+    "tags": ["Risk Management", "Project", "Analysis"],
+    "uses": 134,
+    "rating": 5
+  },
+  {
+    "id": "p075",
+    "title": "Script podcast episode chuyên nghiệp",
+    "category": "content",
+    "tool": "Claude",
+    "content": "Viết script podcast episode [SỐ THỨ TỰ] về chủ đề [CHỦ ĐỀ] với guest [TÊN GUEST/CREDENTIALS]. Duration: [THỜI GIAN] phút. Cấu trúc: (1) Intro (2'): hook + episode preview, host intro, guest intro, (2) Warmup (3'): icebreaker question, (3) Main content (15-20'): 5-7 questions chính với follow-up prompts, (4) Rapid fire (5'): quick takes, (5) Outro (2'): key takeaways recap, CTA, next episode preview. Bao gồm: production notes, sound cues, ad break placement, show notes template, social clip suggestions (3 timestamps), newsletter summary version.",
+    "tags": ["Podcast", "Script", "Content"],
+    "uses": 123,
+    "rating": 4
+  },
+  {
+    "id": "p076",
+    "title": "Annual review & strategy planning",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Tổ chức Annual Strategy Planning session cho [CÔNG TY] — [QUY MÔ, NGÀNH, STAGE]. Facilitation guide: Day 1 — Review & Learning (Year-end retrospective, financial review, market analysis), Day 2 — Strategy Setting (Vision refresh, strategic priorities, OKR draft). Bao gồm: (1) Pre-work materials gửi trước 1 tuần, (2) Agenda chi tiết theo giờ, (3) Facilitation techniques cho mỗi session, (4) Templates: SWOT, Stop/Start/Continue, Strategic priorities matrix, (5) Annual goal setting framework, (6) Budget planning process, (7) Communication plan sau offsite, (8) 30-ngày execution plan. Kèm: pre-work survey template, breakout group guides.",
+    "tags": ["Strategy", "Annual Planning", "Leadership"],
+    "uses": 145,
+    "rating": 5
+  },
+  {
+    "id": "p077",
+    "title": "User research interview guide",
+    "category": "analysis",
+    "tool": "Claude",
+    "content": "Tạo User Research Interview Guide cho dự án [MÔ TẢ PRODUCT/FEATURE] nhằm validate [HYPOTHESIS]. Research goals: [MỤC TIÊU]. Bao gồm: (1) Screener questionnaire để recruit đúng người, (2) Research objectives — 5 câu hỏi cần trả lời, (3) Interview script: Warm-up (5'), Context-setting (10'), Core questions (25'), Concept test (10'), Wrap-up (5'), (4) Probing questions cho mỗi main question, (5) Prototype/concept show script, (6) Observer guide & note-taking template, (7) Affinity mapping template, (8) Analysis framework: Jobs-to-be-Done + emotional journey, (9) Insights report template. Sample size recommendation & bias avoidance.",
+    "tags": ["User Research", "UX", "Product Discovery"],
+    "uses": 112,
+    "rating": 4
+  },
+  {
+    "id": "p078",
+    "title": "Tạo quiz/assessment lead generation",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Tạo interactive quiz/assessment cho lead generation về chủ đề [CHỦ ĐỀ LIÊN QUAN SẢN PHẨM]. Target: [AUDIENCE]. Quiz format: [PERSONALITY/SCORED/DIAGNOSTIC]. Bao gồm: (1) Quiz title & hook — tại sao nên làm quiz này, (2) 10-12 questions với options (4 choices each), (3) Scoring logic và segments (4 outcome personas), (4) Result copy cho mỗi persona: diagnosis, recommendations, CTA, (5) Email capture gate — trước hay sau result, (6) Follow-up email sequence cho mỗi persona (3 emails), (7) Distribution copy cho social/email/ads, (8) Thank you page copy. Tool: Typeform vs Outgrow vs built-in.",
+    "tags": ["Quiz", "Lead Gen", "Interactive Content"],
+    "uses": 167,
+    "rating": 5
+  },
+  {
+    "id": "p079",
+    "title": "Thư xin tài trợ sponsorship event",
+    "category": "sales",
+    "tool": "Claude",
+    "content": "Viết sponsorship proposal để mời [TÊN BRAND] tài trợ cho sự kiện [TÊN SỰ KIỆN] của [TỔ CHỨC]. Event details: [QUY MÔ, AUDIENCE, DATE]. Bao gồm: (1) Event overview & audience demographics, (2) Why this audience matters to sponsor, (3) Sponsorship packages 3 tiers: Gold/Silver/Bronze với benefits, (4) Activation opportunities — unique & creative, (5) Media reach & amplification, (6) Past event metrics & testimonials, (7) Custom package option, (8) Investment & ROI estimate, (9) Timeline & deadlines, (10) Next steps. Format: professional PDF-ready. Kèm follow-up email sequence 3 touches.",
+    "tags": ["Sponsorship", "Event", "Partnership"],
+    "uses": 89,
+    "rating": 4
+  },
+  {
+    "id": "p080",
+    "title": "Xây dựng hệ thống quản lý dự án Agile",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Thiết kế Agile Project Management System cho team [QUY MÔ] làm [LOẠI DỰ ÁN: Product/Client Work/Internal]. Methodology: [Scrum/Kanban/Scrumban]. Bao gồm: (1) Process setup: sprint length, ceremonies, roles, (2) Backlog management: epic → story → task hierarchy, story point system, (3) Sprint planning template & DoD (Definition of Done), (4) Daily standup format: Yesterday/Today/Blockers (15'), (5) Sprint review & demo guide, (6) Retrospective formats: 4Ls, Start/Stop/Continue, (7) Velocity tracking & capacity planning, (8) Escalation & blocker removal process, (9) Tools: Jira vs Linear vs Notion vs Trello setup guide, (10) Team working agreements. Kèm first sprint kickoff plan.",
+    "tags": ["Agile", "Project Management", "Scrum"],
+    "uses": 198,
+    "rating": 5
+  },
+  {
+    "id": "p081",
+    "title": "Tuyển dụng thông qua LinkedIn outreach",
+    "category": "hr",
+    "tool": "ChatGPT",
+    "content": "Viết LinkedIn outreach templates để headhunt candidates cho vị trí [VỊ TRÍ] tại [CÔNG TY]. Target: passive candidates với profile [MÔ TẢ]. Bao gồm: (1) Connection request note (300 chars) — 3 phiên bản test: value-first, curiosity, mutual connection, (2) InMail subject lines 5 options, (3) InMail body templates — 3 angles: career growth, company mission, role uniqueness, (4) Follow-up messages sau accept: Day 1, Day 3, Day 7, (5) Response handling: interested, not now, referral request, (6) Sequence automation setup trên LinkedIn Sales Navigator. Tips để tăng acceptance rate & response rate.",
+    "tags": ["LinkedIn", "Headhunting", "Recruitment"],
+    "uses": 234,
+    "rating": 4
+  },
+  {
+    "id": "p082",
+    "title": "Competitive intelligence report hàng tháng",
+    "category": "analysis",
+    "tool": "Perplexity",
+    "content": "Thực hiện Competitive Intelligence Report tháng [X] cho [CÔNG TY] trong ngành [NGÀNH]. Theo dõi [SỐ] đối thủ: [TÊN ĐỐI THỦ]. Bao gồm: (1) Executive summary — thay đổi lớn nhất tháng này, (2) Per-competitor: product updates, pricing changes, hiring signals, marketing campaigns, press coverage, (3) Market moves: new entrants, M&A activity, funding rounds, (4) Customer sentiment scan: review sites, social media, forums, (5) Share of voice analysis, (6) Battlecard updates cần thiết, (7) Opportunities & threats identified, (8) Strategic recommendations 3-5 điểm. Sources list. Template để repeat monthly.",
+    "tags": ["Competitive Intelligence", "Analysis", "Strategy"],
+    "uses": 112,
+    "rating": 4
+  },
+  {
+    "id": "p083",
+    "title": "Kịch bản upsell cho khách hàng hiện tại",
+    "category": "sales",
+    "tool": "Claude",
+    "content": "Tạo upsell/cross-sell strategy và scripts cho [SẢN PHẨM] nhắm đến khách hàng đang dùng [GÓI HIỆN TẠI]. Upsell targets: [GÓI CAO HƠN/ADD-ONS]. Bao gồm: (1) Trigger signals — khi nào nên upsell (usage milestones, business events, ROI realized), (2) Email upsell sequence 4 emails, (3) In-app upsell messages và placement, (4) Renewal conversation script (phone), (5) QBR upsell agenda, (6) ROI calculator tool cho conversation, (7) Handling 5 common objections, (8) Incentive structures: discounts, bundles, limited-time, (9) Internal playbook cho CSM/AE, (10) Success metrics. Ethical upsell principles.",
+    "tags": ["Upsell", "Account Expansion", "Revenue"],
+    "uses": 178,
+    "rating": 5
+  },
+  {
+    "id": "p084",
+    "title": "Xây dựng brand guidelines toàn diện",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Tạo Brand Guidelines document cho [BRAND] — phiên bản [FULL/QUICK REFERENCE]. Bao gồm: (1) Logo usage: do/don't, clear space, minimum sizes, on dark/light/color backgrounds, (2) Color palette: primary, secondary, accent — hex, RGB, CMYK, Pantone codes, (3) Typography: font families, hierarchy (H1-H6, body, caption), sizes, weights, (4) Photography & illustration style, (5) Iconography guidelines, (6) Brand voice & tone (5 key traits với examples), (7) Do's and Don'ts visual examples, (8) Social media specifications cho 5 platforms, (9) Email signature template, (10) Business card/letterhead specs, (11) Presentation template guide. PDF-ready format.",
+    "tags": ["Brand Guidelines", "Design", "Identity"],
+    "uses": 156,
+    "rating": 5
+  },
+  {
+    "id": "p085",
+    "title": "API documentation dễ đọc",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Viết API documentation cho [API NAME] nhắm đến [DEVELOPERS: Frontend/Backend/Mobile]. Context: [API ENDPOINTS CHÍNH, AUTH METHOD]. Cấu trúc: (1) Overview: purpose, base URL, authentication, versioning, (2) Quick start guide — 5 phút từ zero đến first API call, (3) Authentication: step-by-step, code examples cho 3 languages, (4) Rate limiting: limits, headers, retry strategy, (5) Endpoints documentation: GET/POST/PUT/DELETE với request/response examples, (6) Error codes: table với description và resolution, (7) Code samples (Python/JS/curl) cho use cases phổ biến, (8) Changelog, (9) SDKs & libraries. Interactive examples với real values.",
+    "tags": ["API", "Documentation", "Developer"],
+    "uses": 89,
+    "rating": 4
+  },
+  {
+    "id": "p086",
+    "title": "Chính sách và quy trình hoàn tiền",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Xây dựng Refund & Returns Policy cho [LOẠI DOANH NGHIỆP: eCommerce/SaaS/Services]. Bao gồm: (1) Policy statement rõ ràng — điều kiện được hoàn tiền, thời hạn, exclusions, (2) Quy trình xử lý: kênh tiếp nhận, SLA review, approval levels, processing time, (3) Refund scenarios matrix: full refund vs partial vs store credit, (4) Communication templates: xác nhận nhận yêu cầu, approved, denied, partial, (5) Edge case guidelines cho CS team, (6) Fraud prevention measures, (7) Analytics: refund rate by product/reason, (8) Policy page copy cho website, (9) FAQ top 10, (10) Continuous review triggers. Legal review checklist Việt Nam.",
+    "tags": ["Refund Policy", "Customer Service", "Operations"],
+    "uses": 134,
+    "rating": 4
+  },
+  {
+    "id": "p087",
+    "title": "Chiến lược retention email cho e-commerce",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Thiết kế Email Retention Program cho e-commerce [NGÀNH HÀNG] với [SỐ] subscribers. Bao gồm: (1) Lifecycle stages & email triggers: New customer (0-30 ngày), Active (31-90), At-risk (91-180), Lapsed (180+), Win-back (6 tháng+), (2) Automation flows cho mỗi stage, (3) Email templates: Post-purchase care, Educational series, Re-engagement, Win-back offer, Birthday/Anniversary, (4) Segmentation strategy: RFM model (Recency, Frequency, Monetary), (5) Personalization variables & product recommendation logic, (6) Send time optimization, (7) A/B test roadmap (subject lines, CTAs, offers), (8) Metrics benchmarks. Kèm 3 complete email drafts.",
+    "tags": ["Email Marketing", "Retention", "E-commerce"],
+    "uses": 267,
+    "rating": 5
+  },
+  {
+    "id": "p088",
+    "title": "Phân tích churn và chiến lược giảm churn",
+    "category": "analysis",
+    "tool": "Claude",
+    "content": "Phân tích customer churn cho [SẢN PHẨM/DỊCH VỤ]. Data: [CHURN RATE, COHORT DATA, EXIT SURVEY]. Bao gồm: (1) Churn rate analysis: monthly, voluntary vs involuntary, by segment/plan/cohort, (2) Revenue churn vs customer churn, (3) Churn reasons taxonomy từ exit surveys, (4) Leading indicators — signals trước khi churn 30-60 ngày, (5) Customer health score model, (6) At-risk segment identification, (7) Intervention playbooks theo reason to churn, (8) Win-back program design, (9) Pricing changes impact analysis, (10) 10 actionable churn reduction initiatives với projected impact. Industry benchmark comparison.",
+    "tags": ["Churn", "Retention", "SaaS Analytics"],
+    "uses": 145,
+    "rating": 5
+  },
+  {
+    "id": "p089",
+    "title": "Workshop thiết kế tư duy đổi mới sáng tạo",
+    "category": "hr",
+    "tool": "Claude",
+    "content": "Thiết kế Innovation Workshop 1 ngày cho [ĐỐI TƯỢNG: Leadership/All-hands/Cross-functional team]. Challenge to solve: [VẤN ÐỀ DOANH NGHIỆP]. Agenda: Morning — Diverge (Design Thinking Empathy + Define), Afternoon — Converge (Ideate + Prototype + Test). Mỗi session: (1) Facilitation guide và timing, (2) Materials needed, (3) Instructions rõ ràng, (4) Output template, (5) Energy management tips. Activities: How Might We, SCAMPER, Crazy 8s, Dot voting, Paper prototype. Kèm: virtual adaptation guide, pre-work, debrief questions, action planning template. Expected outputs.",
+    "tags": ["Innovation", "Workshop", "Design Thinking"],
+    "uses": 112,
+    "rating": 5
+  },
+  {
+    "id": "p090",
+    "title": "Chuẩn bị cho cuộc họp hội đồng quản trị",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Chuẩn bị Board Meeting package cho [LOẠI CÔNG TY: Startup/SME] — cuộc họp [QUẢN TRỊ/ĐẦU TƯ] lần thứ [SỐ]. Meeting objectives: [MỤC TIÊU]. Bao gồm: (1) Board deck template: 12 slides — Company snapshot, Highlights/Lowlights, Financial review, OKR scorecard, Key risks, Strategic discussion, Decisions needed, (2) Pre-read memo 2 trang, (3) CFO financial commentary template, (4) CEO narrative — 3 mins oral summary, (5) Decision memos cho items cần approval, (6) Board minutes template, (7) Action item tracker, (8) Board Q&A preparation — 20 likely questions + answers. Corporate governance best practices.",
+    "tags": ["Board Meeting", "Governance", "Corporate"],
+    "uses": 89,
+    "rating": 5
+  },
+  {
+    "id": "p091",
+    "title": "Xây dựng chương trình referral khách hàng",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Thiết kế Customer Referral Program cho [SẢN PHẨM/DỊCH VỤ] với [EXISTING CUSTOMERS: SỐ]. Objective: [SỐ REFERRALS/THÁNG]. Bao gồm: (1) Referral mechanics: double-sided vs one-sided, incentive types (cash/credit/upgrade/gift), (2) Referral tracking: unique codes/links, attribution window, (3) Program journey: discovery → share → friend signup → reward, (4) Communication touchpoints: email, in-app, post-purchase moment, (5) Landing page for referred friends, (6) Referral email templates — 3 levels: immediate post-purchase, milestone triggers, re-engagement, (7) Social sharing templates, (8) Fraud prevention, (9) Unit economics model: CAC via referral vs other channels. Launch plan.",
+    "tags": ["Referral Program", "Growth", "Word of Mouth"],
+    "uses": 198,
+    "rating": 5
+  },
+  {
+    "id": "p092",
+    "title": "Phân tích investment opportunity",
+    "category": "analysis",
+    "tool": "Claude",
+    "content": "Đánh giá investment opportunity: đầu tư vào [LOẠI HÌNH: startup/real estate/stock/business] với [SỐ TIỀN]. Context: [THÔNG TIN VỀ OPPORTUNITY]. Bao gồm: (1) Opportunity overview & thesis, (2) Market analysis: TAM, growth rate, competition, (3) Financial projections: 3 scenarios (bear/base/bull) với assumptions, (4) Valuation analysis: comparable transactions, DCF nếu có cashflows, (5) Key risks: quantified, (6) Return scenarios: IRR, MOIC, payback period, (7) Deal terms analysis nếu có, (8) Exit options & timeline, (9) Value creation opportunities, (10) Go/No-go recommendation với key rationale. Investment memo format.",
+    "tags": ["Investment", "Financial Analysis", "Due Diligence"],
+    "uses": 112,
+    "rating": 5
+  },
+  {
+    "id": "p093",
+    "title": "Chương trình Employee Recognition",
+    "category": "hr",
+    "tool": "Claude",
+    "content": "Thiết kế Employee Recognition Program cho công ty [QUY MÔ] nhằm tăng engagement và retention. Bao gồm: (1) Recognition philosophy — core principles, (2) Recognition types: real-time peer, manager-given, milestone, performance-based, (3) Recognition frequency guidelines cho mỗi loại, (4) Points system & redemption catalog, (5) Nomination process cho awards, (6) Award tiers: Spot Award, Monthly MVP, Quarterly Star, Annual Excellence, (7) Recognition moments: team meetings, company all-hands, private, public, (8) Digital recognition platform (Bonusly vs Nectar), (9) Budget allocation per head, (10) Measurement: participation rate, employee NPS, retention correlation. Launch plan.",
+    "tags": ["Employee Recognition", "Engagement", "HR"],
+    "uses": 134,
+    "rating": 4
+  },
+  {
+    "id": "p094",
+    "title": "Thiết kế trải nghiệm khách hàng omnichannel",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Thiết kế Omnichannel Customer Experience Strategy cho [LOẠI DOANH NGHIỆP]. Channels: [DANH SÁCH: Website/App/Social/Chat/Phone/In-store]. Bao gồm: (1) Channel orchestration — khi nào dùng channel nào, (2) Cross-channel consistency checklist: tone, data, context, (3) Customer data platform requirements cho unified profile, (4) Key touchpoint redesign: onboarding, support, purchase, renewal, (5) Channel preference detection & routing, (6) Handoff protocols giữa channels, (7) Measurement framework: CES, CSAT per channel, (8) Channel investment priorities — ROI model, (9) Quick wins 30 ngày vs long-term roadmap. Gartner CX framework application.",
+    "tags": ["Omnichannel", "CX", "Customer Experience"],
+    "uses": 112,
+    "rating": 4
+  },
+  {
+    "id": "p095",
+    "title": "Thiết kế chương trình mentorship nội bộ",
+    "category": "hr",
+    "tool": "Claude",
+    "content": "Xây dựng Internal Mentorship Program cho công ty [QUY MÔ]. Goals: [CAREER DEVELOPMENT/SKILL TRANSFER/CULTURE]. Bao gồm: (1) Program design: 1-on-1 vs group, peer vs senior, cross-functional, (2) Mentor/mentee matching criteria & algorithm, (3) Application & intake form, (4) Onboarding kit cho cả hai bên, (5) Meeting structure: first meeting icebreaker, goal setting template, session check-in, (6) Discussion guide library 20 topics, (7) Mid-point và end-of-program reviews, (8) Recognition cho mentors, (9) Program metrics: participation, satisfaction, skill development, promotion rate, (10) Cohort facilitation guide. Launch communication plan.",
+    "tags": ["Mentorship", "L&D", "Talent Development"],
+    "uses": 112,
+    "rating": 4
+  },
+  {
+    "id": "p096",
+    "title": "Xây dựng content hub và pillar pages",
+    "category": "content",
+    "tool": "Claude",
+    "content": "Thiết kế Content Hub Strategy cho [BRAND] trong ngành [NGÀNH]. Target: organic traffic [TARGET] trong [THỜI GIAN]. Bao gồm: (1) Hub & spoke model: 3-5 pillar topics với rationale, (2) Pillar page structure cho mỗi topic: outline, word count, internal linking plan, (3) Cluster content plan: 10 supporting articles per pillar, (4) SEO architecture: URL structure, breadcrumbs, canonical, (5) Content update workflow & freshness policy, (6) Internal linking strategy — 3-tier model, (7) Featured snippet targeting, (8) Content distribution & promotion per piece, (9) Authority building: guest posts, digital PR, (10) 6-tháng content calendar. Traffic projection model.",
+    "tags": ["Content Hub", "SEO", "Pillar Pages"],
+    "uses": 145,
+    "rating": 5
+  },
+  {
+    "id": "p097",
+    "title": "Triển khai hệ thống đánh giá 360 độ",
+    "category": "hr",
+    "tool": "Claude",
+    "content": "Thiết kế 360-Degree Feedback System cho công ty [QUY MÔ]. Bao gồm: (1) Competency framework: 6-8 core competencies với behavioral indicators, (2) Survey design: self, peer (3-5 người), manager, direct report — câu hỏi riêng cho mỗi rater type, (3) Rating scale & question format (Likert + open-ended), (4) Rater selection guidelines & conflicts of interest, (5) Anonymity protocol, (6) Report format: individual, comparison, heatmap, (7) Debrief conversation guide, (8) Development planning template sau 360, (9) Cadence: annual vs bi-annual, (10) Technology: Survey platform vs dedicated tool (Lattice/Culture Amp). Implementation rollout plan.",
+    "tags": ["360 Feedback", "Performance", "HR"],
+    "uses": 123,
+    "rating": 4
+  },
+  {
+    "id": "p098",
+    "title": "Tối ưu hóa trang sản phẩm e-commerce",
+    "category": "marketing",
+    "tool": "Claude",
+    "content": "Tối ưu Product Page cho [SẢN PHẨM] trên [PLATFORM: Shopify/WooCommerce/Custom]. Current conversion rate: [X%]. Benchmark: [Y%]. Bao gồm: (1) Product title optimization — SEO + conversion, (2) Product description rewrite: benefit-first, sensory language, use cases, (3) Bullet points 5-7 feature-benefit pairs, (4) Image requirements: hero, lifestyle, detail, comparison, size guide, (5) Social proof optimization: review structure, Q&A, (6) Trust signals placement, (7) Urgency/scarcity copy, (8) Upsell/cross-sell widget copy, (9) Mobile optimization priorities, (10) A/B test roadmap 10 experiments với priority. CRO checklist 25 điểm.",
+    "tags": ["E-commerce", "Product Page", "CRO"],
+    "uses": 267,
+    "rating": 5
+  },
+  {
+    "id": "p099",
+    "title": "Business case cho internal project",
+    "category": "operations",
+    "tool": "Claude",
+    "content": "Viết Business Case để approve dự án nội bộ [TÊN DỰ ÁN] cần đầu tư [NGÂN SÁCH]. Audience: [LEADERSHIP/BOARD/FINANCE COMMITTEE]. Cấu trúc: (1) Executive Summary — problem, solution, investment, ROI, recommendation, (2) Problem Statement — impact của việc không làm, (3) Solution options: do nothing vs minimum vs recommended vs maximum, (4) Cost-benefit analysis: all costs + quantified benefits (time saved, revenue gained, risk reduced), (5) ROI calculation: payback period, NPV, IRR, (6) Risk analysis, (7) Implementation plan high-level, (8) Dependencies & assumptions, (9) Decision request — specific approval needed. Financial model template.",
+    "tags": ["Business Case", "Internal", "Finance"],
+    "uses": 134,
+    "rating": 5
+  },
+  {
+    "id": "p100",
+    "title": "AI prompt tổng hợp báo cáo tự động",
+    "category": "automation",
+    "tool": "Claude",
+    "content": "Tạo meta-prompt để tự động tổng hợp dữ liệu từ nhiều nguồn thành báo cáo cho [LOẠI BÁO CÁO: Daily/Weekly/Monthly]. Data sources: [DANH SÁCH NGUỒN DỮ LIỆU]. Yêu cầu thiết kế prompt: (1) Data input format standardization, (2) Analysis instructions: patterns, anomalies, comparisons, (3) Report structure template với variable placeholders, (4) Tone & length guidelines, (5) Decision-support framing — what leadership needs to act, (6) Visualization suggestions text, (7) Distribution triggers & format adaptation (email vs Slack vs PDF). Kèm: wrapper automation với Make/Zapier để trigger daily, test cases, quality checklist.",
+    "tags": ["Report Automation", "AI Workflow", "Productivity"],
+    "uses": 289,
+    "rating": 5
+  }
+]

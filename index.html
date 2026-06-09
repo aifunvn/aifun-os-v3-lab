@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIFUN AI Portal V2.0 — AI Operating System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- ══════════════════════════ SIDEBAR ══════════════════════════ -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="44" height="44" rx="11" fill="url(#lg1)"/>
+          <path d="M11 32L22 10L33 32" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M15 26H29" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="34" cy="13" r="3.5" fill="#60a5fa"/>
+          <circle cx="34" cy="13" r="1.8" fill="white"/>
+          <defs>
+            <linearGradient id="lg1" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#0f2044"/><stop offset=".5" stop-color="#1e40af"/><stop offset="1" stop-color="#2563eb"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">AIFUN</span>
+        <span class="logo-tagline">AI Operating System</span>
+      </div>
+    </div>
+    <button class="sidebar-close" id="sidebarClose">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section">
+      <span class="nav-label">MAIN</span>
+      <ul>
+        <li><a href="#" class="nav-item active" data-page="home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Trang chủ</span>
+        </a></li>
+        <li><a href="#" class="nav-item" data-page="ai-tools">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>
+          <span>AI Tools</span>
+          <span class="badge" id="badge-tools">7</span>
+        </a></li>
+        <li><a href="#" class="nav-item" data-page="prompts">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span>Prompt Library</span>
+          <span class="badge" id="badge-prompts">12</span>
+        </a></li>
+        <li><a href="#" class="nav-item" data-page="skills">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>Skills</span>
+          <span class="badge" id="badge-skills">10</span>
+        </a></li>
+      </ul>
+    </div>
+
+    <div class="nav-section">
+      <span class="nav-label">SYSTEMS</span>
+      <ul>
+        <li><a href="#" class="nav-item" data-page="sop-library">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg>
+          <span>SOP Library</span>
+          <span class="badge" id="badge-sops">24</span>
+        </a></li>
+        <li><a href="#" class="nav-item" data-page="crm">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          <span>CRM Systems</span>
+        </a></li>
+        <li><a href="#" class="nav-item" data-page="automation">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          <span>Automation</span>
+        </a></li>
+      </ul>
+    </div>
+
+    <div class="nav-section">
+      <span class="nav-label">WORKSPACE</span>
+      <ul>
+        <li><a href="#" class="nav-item" data-page="projects">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span>Projects</span>
+          <span class="badge" id="badge-projects">5</span>
+        </a></li>
+        <li><a href="#" class="nav-item" data-page="training">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          <span>Training</span>
+        </a></li>
+        <li><a href="#" class="nav-item" data-page="dashboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>Dashboard</span>
+        </a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="user-card">
+      <div class="ceo-avatar">
+        <div class="ceo-avatar-inner">DTC</div>
+        <span class="ceo-online"></span>
+      </div>
+      <div class="user-info">
+        <span class="user-name">Diệp Thành Chung</span>
+        <span class="user-role">CEO · AIFUN</span>
+      </div>
+      <button class="user-menu-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+      </button>
+    </div>
+    <div class="sidebar-brand"><a href="https://aifun.ai.vn" target="_blank">aifun.ai.vn</a></div>
+  </div>
+</aside>
+
+<!-- ══════════════════════════ MAIN ══════════════════════════ -->
+<div class="main-wrapper">
+
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="menu-toggle" id="menuToggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="search-bar" id="globalSearchBar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" id="globalSearch" placeholder="Tìm kiếm tools, prompts, skills... (⌘K)" autocomplete="off"/>
+        <kbd>⌘K</kbd>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <!-- Sheets sync status -->
+      <div class="sync-status" id="syncStatus" title="Google Sheets: chưa kết nối">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+        <span id="syncLabel">Local</span>
+      </div>
+      <!-- Backup button group -->
+      <div class="backup-btn-group" id="backupGroup">
+        <button class="backup-trigger-btn" id="backupTrigger" title="Backup dữ liệu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v14a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+          <span>Backup</span>
+          <svg class="backup-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="backup-dropdown" id="backupDropdown">
+          <button class="backup-item export-item" onclick="App.exportBackup()">
+            <span class="backup-item-icon">⬇️</span>
+            <div class="backup-item-text">
+              <strong>Export Backup</strong>
+              <span>Xuất toàn bộ dữ liệu → JSON</span>
+            </div>
+          </button>
+          <div class="backup-divider"></div>
+          <label class="backup-item import-item" for="importFileInput">
+            <span class="backup-item-icon">⬆️</span>
+            <div class="backup-item-text">
+              <strong>Import Backup</strong>
+              <span>Khôi phục từ file JSON</span>
+            </div>
+          </label>
+          <input type="file" id="importFileInput" accept=".json" style="display:none" />
+        </div>
+      </div>
+
+      <button class="topbar-btn dark-toggle" id="darkToggle" title="Chế độ tối (Ctrl+D)">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <button class="topbar-btn" title="Thông báo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+        <span class="notif-dot"></span>
+      </button>
+      <div class="topbar-avatar" title="Diệp Thành Chung">DTC</div>
+      <div class="version-chip">v2.0</div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════ PAGES ══════════════════════════ -->
+  <main class="content" id="pageContent">
+
+    <!-- ── HOME ──────────────────────────────────────── -->
+    <section class="page active" id="page-home">
+      <div class="hero-header">
+        <div class="hero-text">
+          <div class="hero-badge">🚀 AIFUN AI Portal V2.0 — Data-Driven</div>
+          <h1 class="page-title">Xin chào, Chung <span class="wave">👋</span></h1>
+          <p class="page-subtitle">AI Operating System — Trung tâm điều hành doanh nghiệp thông minh</p>
+        </div>
+        <div class="ceo-profile-card">
+          <div class="ceo-profile-avatar">
+            <div class="ceo-large-avatar">DTC</div>
+            <span class="ceo-status-badge">● Online</span>
+          </div>
+          <div class="ceo-profile-info">
+            <span class="ceo-profile-name">Diệp Thành Chung</span>
+            <span class="ceo-profile-title">CEO · AIFUN</span>
+            <span class="ceo-profile-tag">AI Optimal Solution</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats (dynamic) -->
+      <div class="stats-grid-8" id="homeStats"></div>
+
+      <!-- Quick + Activity -->
+      <div class="two-col-grid">
+        <div class="card">
+          <div class="card-header"><h3 class="card-title">Truy cập nhanh</h3></div>
+          <div class="quick-grid">
+            <button class="quick-btn" onclick="App.nav('ai-tools')"><span class="quick-icon">🤖</span><span>AI Tools</span></button>
+            <button class="quick-btn" onclick="App.nav('prompts')"><span class="quick-icon">📝</span><span>Prompts</span></button>
+            <button class="quick-btn" onclick="App.nav('skills')"><span class="quick-icon">⚡</span><span>Skills</span></button>
+            <button class="quick-btn" onclick="App.nav('sop-library')"><span class="quick-icon">📋</span><span>SOP</span></button>
+            <button class="quick-btn" onclick="App.nav('crm')"><span class="quick-icon">🤝</span><span>CRM</span></button>
+            <button class="quick-btn" onclick="App.nav('automation')"><span class="quick-icon">⚙️</span><span>Auto</span></button>
+            <button class="quick-btn" onclick="App.nav('projects')"><span class="quick-icon">📁</span><span>Projects</span></button>
+            <button class="quick-btn" onclick="App.nav('training')"><span class="quick-icon">🎓</span><span>Training</span></button>
+            <button class="quick-btn" onclick="App.nav('dashboard')"><span class="quick-icon">📊</span><span>Dashboard</span></button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"><h3 class="card-title">Hoạt động gần đây</h3><a href="#" class="card-link">Xem tất cả</a></div>
+          <ul class="activity-list">
+            <li class="activity-item"><div class="activity-icon blue">📄</div><div class="activity-info"><span class="activity-title">SOP Onboarding hoàn thành</span><span class="activity-time">2 phút trước</span></div><span class="activity-badge success">Done</span></li>
+            <li class="activity-item"><div class="activity-icon purple">🎬</div><div class="activity-info"><span class="activity-title">Video Factory đang chạy</span><span class="activity-time">15 phút trước</span></div><span class="activity-badge running">Running</span></li>
+            <li class="activity-item"><div class="activity-icon green">⚙️</div><div class="activity-info"><span class="activity-title">Automation Email kích hoạt</span><span class="activity-time">1 giờ trước</span></div><span class="activity-badge success">Done</span></li>
+            <li class="activity-item"><div class="activity-icon orange">🤝</div><div class="activity-info"><span class="activity-title">CRM pipeline cập nhật</span><span class="activity-time">3 giờ trước</span></div><span class="activity-badge info">Updated</span></li>
+            <li class="activity-item"><div class="activity-icon teal">🎓</div><div class="activity-info"><span class="activity-title">Course Builder: Module 3 done</span><span class="activity-time">Hôm qua</span></div><span class="activity-badge success">Done</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- AI Tools chips -->
+      <div class="card">
+        <div class="card-header"><h3 class="card-title">AI Tools nổi bật</h3><a href="#" class="card-link" onclick="App.nav('ai-tools');return false;">Xem tất cả →</a></div>
+        <div class="tools-row" id="homeToolsRow"></div>
+      </div>
+    </section>
+
+    <!-- ── AI TOOLS ───────────────────────────────────── -->
+    <section class="page" id="page-ai-tools">
+      <div class="page-header">
+        <div><h1 class="page-title">AI Tools</h1><p class="page-subtitle">Bộ công cụ AI mạnh mẽ — click để mở trực tiếp</p></div>
+        <div class="topbar-btn-group">
+          <input type="text" class="filter-input" id="toolSearch" placeholder="🔍 Tìm tool..." />
+        </div>
+      </div>
+      <div class="tools-grid" id="toolsGrid"></div>
+    </section>
+
+    <!-- ── PROMPT LIBRARY ─────────────────────────────── -->
+    <section class="page" id="page-prompts">
+      <div class="page-header">
+        <div><h1 class="page-title">Prompt Library</h1><p class="page-subtitle" id="promptSubtitle">Thư viện prompt tối ưu cho doanh nghiệp Việt Nam</p></div>
+        <button class="btn btn-primary" id="addPromptBtn">+ Thêm Prompt</button>
+      </div>
+      <!-- Search + Filter bar -->
+      <div class="prompt-toolbar">
+        <div class="search-inline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" id="promptSearch" placeholder="Tìm kiếm prompt..." />
+        </div>
+        <div class="prompt-categories" id="promptCats"></div>
+      </div>
+      <div class="prompts-grid" id="promptsGrid"></div>
+      <div class="empty-state" id="promptEmpty" style="display:none">
+        <div class="empty-icon">🔍</div>
+        <h3>Không tìm thấy prompt</h3>
+        <p>Thử từ khóa khác hoặc chọn danh mục khác.</p>
+      </div>
+    </section>
+
+    <!-- ── SKILLS ─────────────────────────────────────── -->
+    <section class="page" id="page-skills">
+      <div class="page-header">
+        <div><h1 class="page-title">Skills</h1><p class="page-subtitle">Bộ kỹ năng AI chuyên biệt · <span id="skillCount">0</span> skills</p></div>
+        <div class="topbar-btn-group">
+          <input type="text" class="filter-input" id="skillSearch" placeholder="🔍 Tìm skill..." />
+        </div>
+      </div>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </section>
+
+    <!-- ── SOP LIBRARY ────────────────────────────────── -->
+    <section class="page" id="page-sop-library">
+      <div class="page-header">
+        <div><h1 class="page-title">SOP Library</h1><p class="page-subtitle" id="sopSubtitle">Thư viện quy trình vận hành chuẩn</p></div>
+        <button class="btn btn-primary">+ Tạo SOP mới</button>
+      </div>
+      <div class="sop-stats-row" id="sopStatsRow"></div>
+      <div class="prompt-toolbar">
+        <div class="search-inline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" id="sopSearch" placeholder="Tìm SOP..." />
+        </div>
+        <div class="prompt-categories" id="sopDeptFilter"></div>
+      </div>
+      <div class="sop-table-wrap">
+        <table class="sop-table" id="sopTable">
+          <thead><tr><th>Tên SOP</th><th>Phòng ban</th><th>Trạng thái</th><th>Cập nhật</th><th>Hành động</th></tr></thead>
+          <tbody id="sopTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ── CRM ────────────────────────────────────────── -->
+    <section class="page" id="page-crm">
+      <div class="page-header">
+        <div><h1 class="page-title">CRM Systems</h1><p class="page-subtitle">Hệ thống quản lý quan hệ khách hàng thông minh với AI</p></div>
+        <button class="btn btn-primary">+ Thêm Lead</button>
+      </div>
+      <div class="crm-kpi-row">
+        <div class="crm-kpi-card"><div class="crm-kpi-icon" style="background:#eff6ff;color:#1e40af">👤</div><div><div class="crm-kpi-val">1,247</div><div class="crm-kpi-lbl">Tổng Contacts</div></div></div>
+        <div class="crm-kpi-card"><div class="crm-kpi-icon" style="background:#ecfdf5;color:#059669">💼</div><div><div class="crm-kpi-val">284</div><div class="crm-kpi-lbl">Active Leads</div></div></div>
+        <div class="crm-kpi-card"><div class="crm-kpi-icon" style="background:#fef3c7;color:#d97706">🎯</div><div><div class="crm-kpi-val">47</div><div class="crm-kpi-lbl">Deals tháng này</div></div></div>
+        <div class="crm-kpi-card"><div class="crm-kpi-icon" style="background:#f5f3ff;color:#7c3aed">📊</div><div><div class="crm-kpi-val">34.2%</div><div class="crm-kpi-lbl">Tỷ lệ chuyển đổi</div></div></div>
+      </div>
+      <div class="card" style="margin-bottom:20px">
+        <div class="card-header"><h3 class="card-title">Sales Pipeline</h3><span style="font-size:.73rem;color:var(--text-faint)">Cập nhật: 09/06/2026</span></div>
+        <div class="pipeline" id="crmPipeline"></div>
+      </div>
+      <div class="card">
+        <div class="card-header"><h3 class="card-title">Khách hàng gần đây</h3><a href="#" class="card-link">Xem tất cả →</a></div>
+        <div class="contacts-table">
+          <div class="contact-row header"><span>Tên</span><span>Công ty</span><span>Stage</span><span>Giá trị</span><span>Ngày</span></div>
+          <div class="contact-row"><span class="contact-name"><div class="contact-avatar" style="background:#dbeafe;color:#1e40af">NV</div>Nguyễn Văn A</span><span class="contact-company">Tech Solutions</span><span><span class="pill green">Chốt deal</span></span><span class="contact-val">₫45M</span><span class="contact-date">07/06</span></div>
+          <div class="contact-row"><span class="contact-name"><div class="contact-avatar" style="background:#ecfdf5;color:#059669">TT</div>Trần Thị B</span><span class="contact-company">SME Corp</span><span><span class="pill orange">Báo giá</span></span><span class="contact-val">₫28M</span><span class="contact-date">06/06</span></div>
+          <div class="contact-row"><span class="contact-name"><div class="contact-avatar" style="background:#f5f3ff;color:#7c3aed">LM</div>Lê Minh C</span><span class="contact-company">Startup VN</span><span><span class="pill blue">Demo</span></span><span class="contact-val">₫120M</span><span class="contact-date">05/06</span></div>
+          <div class="contact-row"><span class="contact-name"><div class="contact-avatar" style="background:#fef3c7;color:#d97706">PH</div>Phạm Hùng D</span><span class="contact-company">Retail Group</span><span><span class="pill gray">Tiếp cận</span></span><span class="contact-val">₫85M</span><span class="contact-date">04/06</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── AUTOMATION ─────────────────────────────────── -->
+    <section class="page" id="page-automation">
+      <div class="page-header">
+        <div><h1 class="page-title">Automation Systems</h1><p class="page-subtitle" id="autoSubtitle">Hệ thống tự động hóa quy trình doanh nghiệp</p></div>
+        <button class="btn btn-primary">+ Tạo Workflow</button>
+      </div>
+      <div class="auto-stats-row" id="autoStatsRow"></div>
+      <div class="workflows-grid" id="workflowsGrid"></div>
+    </section>
+
+    <!-- ── PROJECTS ───────────────────────────────────── -->
+    <section class="page" id="page-projects">
+      <div class="page-header">
+        <div><h1 class="page-title">Projects</h1><p class="page-subtitle" id="projectSubtitle">Quản lý dự án AI</p></div>
+        <div class="header-actions">
+          <input type="text" class="filter-input" id="projectSearch" placeholder="🔍 Tìm dự án..." />
+          <button class="btn btn-primary" id="addProjectBtn">+ Dự án mới</button>
+        </div>
+      </div>
+      <!-- Status filter -->
+      <div class="prompt-categories" id="projectStatusFilter" style="margin-bottom:18px"></div>
+      <div class="projects-list" id="projectsList"></div>
+      <div class="empty-state" id="projectEmpty" style="display:none">
+        <div class="empty-icon">📁</div><h3>Không tìm thấy dự án</h3><p>Thử tìm kiếm khác.</p>
+      </div>
+    </section>
+
+    <!-- ── TRAINING ───────────────────────────────────── -->
+    <section class="page" id="page-training">
+      <div class="page-header">
+        <div><h1 class="page-title">Training</h1><p class="page-subtitle">Chương trình đào tạo AI cho doanh nghiệp</p></div>
+      </div>
+      <div class="training-grid" id="trainingGrid"></div>
+    </section>
+
+    <!-- ── DASHBOARD ──────────────────────────────────── -->
+    <section class="page" id="page-dashboard">
+      <div class="page-header">
+        <div><h1 class="page-title">CEO Dashboard</h1><p class="page-subtitle">Tổng quan hoạt động doanh nghiệp — <span id="dashDate"></span></p></div>
+        <button class="btn btn-ghost" onclick="App.exportReport()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Xuất báo cáo
+        </button>
+      </div>
+
+      <!-- 4 KPI stat cards -->
+      <div class="dashboard-kpi" id="dashKpi"></div>
+
+      <!-- Count cards: Skills / Projects / SOPs / Prompts -->
+      <div class="dash-count-row" id="dashCountRow"></div>
+
+      <div class="two-col-grid">
+        <div class="card">
+          <div class="card-header"><h3 class="card-title">Mục tiêu tháng 6</h3></div>
+          <div class="goals-list" id="dashGoals"></div>
+        </div>
+        <div class="card">
+          <div class="card-header"><h3 class="card-title">Top Skills hoạt động</h3></div>
+          <div class="top-skills" id="dashTopSkills"></div>
+        </div>
+      </div>
+
+      <!-- Project overview -->
+      <div class="card">
+        <div class="card-header"><h3 class="card-title">Tiến độ Projects</h3><a href="#" class="card-link" onclick="App.nav('projects');return false;">Xem tất cả →</a></div>
+        <div class="projects-list" id="dashProjects"></div>
+      </div>
+    </section>
+
+  </main><!-- /content -->
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg viewBox="0 0 32 32" fill="none" class="footer-logo-svg"><rect width="32" height="32" rx="8" fill="url(#fg1)"/><path d="M8 24L16 8L24 24" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M11 20H21" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="25" cy="9" r="2.5" fill="#60a5fa"/><defs><linearGradient id="fg1" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#0f2044"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs></svg>
+        <div><span class="footer-name">AIFUN</span><span class="footer-slogan">AI Optimal Solution</span></div>
+      </div>
+      <div class="footer-center">
+        <span>© 2026 AIFUN. All rights reserved.</span>
+        <span class="footer-sep">·</span>
+        <a href="https://aifun.ai.vn" target="_blank" class="footer-link">aifun.ai.vn</a>
+        <span class="footer-sep">·</span>
+        <span>V2.0</span>
+      </div>
+      <div class="footer-right">
+        <a href="https://aifun.ai.vn" target="_blank" class="footer-website-btn">🌐 aifun.ai.vn</a>
+      </div>
+    </div>
+  </footer>
+</div><!-- /main-wrapper -->
+
+<!-- ══════════ MODAL ══════════ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="mainModal">
+    <div class="modal-header">
+      <h3 id="modalTitle">Modal</h3>
+      <button class="modal-close" id="modalClose">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- ══════════ IMPORT CONFIRM MODAL ══════════ -->
+<div class="modal-overlay" id="importModal">
+  <div class="modal" style="max-width:460px">
+    <div class="modal-header">
+      <h3>⬆️ Import Backup</h3>
+      <button class="modal-close" onclick="App.closeImportModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="import-preview" id="importPreview"></div>
+      <div class="import-warning">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <span>Dữ liệu hiện tại sẽ bị thay thế hoàn toàn. Hành động này không thể hoàn tác.</span>
+      </div>
+      <div class="import-modal-actions">
+        <button class="btn btn-ghost" onclick="App.closeImportModal()">Hủy</button>
+        <button class="btn btn-danger" id="confirmImportBtn" onclick="App.confirmImport()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          Xác nhận Import
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ SKILL MODAL ══════════ -->
+<div class="modal-overlay" id="skillModal">
+  <div class="modal" style="max-width:420px">
+    <div class="modal-header">
+      <h3 id="skillModalTitle">Khởi chạy Skill</h3>
+      <button class="modal-close" onclick="App.closeSkillModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <p id="skillModalDesc" style="font-size:.82rem;color:var(--text-m);margin-bottom:20px;line-height:1.6"></p>
+      <div style="margin-bottom:8px">
+        <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+          <span style="font-size:.74rem;font-weight:600;color:var(--text-b)">Tiến trình</span>
+          <span id="skillModalStatus" style="font-size:.72rem;color:var(--text-m)">Khởi tạo AI...</span>
+        </div>
+        <div class="progress-bar thick"><div class="progress-fill" id="skillModalProgress" style="width:0%"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ TOAST ══════════ -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- Scripts — type=module for ES imports -->
+<script type="module" src="script.js"></script>
+</body>
+</html>
