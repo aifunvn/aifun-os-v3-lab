@@ -28,9 +28,11 @@
 
 export const SHEETS_CONFIG = {
 
-  // ─── ĐIỀN THÔNG TIN CỦA BẠN TẠI ĐÂY ───────────────────────────
-  SPREADSHEET_ID: '',   // VD: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms'
-  API_KEY:        '',   // VD: 'AIzaSyD-9tSrke72PouQMnMX-a4eHs-FldMr8TU'
+  // ─── AIFUN DATA CENTER ──────────────────────────────────────────
+  // Spreadsheet: AIFUN DATA CENTER
+  // URL: https://docs.google.com/spreadsheets/d/1hsD6pEqWmF7Z46SQrumip-wslTCOU1Jnb4f21hyuTyU
+  SPREADSHEET_ID: '1hsD6pEqWmF7Z46SQrumip-wslTCOU1Jnb4f21hyuTyU',
+  API_KEY:        '',   // ← Điền API Key sau khi tạo trên Google Cloud Console
   // ────────────────────────────────────────────────────────────────
 
   // Tên tab trong Spreadsheet — phải khớp chính xác (case-sensitive)

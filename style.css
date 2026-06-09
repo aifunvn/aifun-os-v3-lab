@@ -945,6 +945,21 @@ button.sync-status:hover { filter: brightness(1.08); transform: translateY(-1px)
   background: rgba(16,185,129,.15); color: #059669; }
 [data-theme="dark"] .sp-test-result-tab { background: rgba(16,185,129,.2); color: #6ee7b7; }
 
+/* Error guide inside test result */
+.sp-error-guide {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: rgba(239,68,68,.06);
+  border: 1px solid rgba(239,68,68,.2);
+  border-radius: 8px;
+  font-size: .75rem;
+}
+.sp-error-guide-title { font-weight: 700; margin-bottom: 6px; color: inherit; }
+.sp-error-guide-steps { margin: 0; padding-left: 18px; line-height: 1.8; }
+.sp-error-guide-steps a { color: var(--blue-600); text-decoration: underline; }
+[data-theme="dark"] .sp-error-guide { background: rgba(239,68,68,.08); border-color: rgba(239,68,68,.25); }
+[data-theme="dark"] .sp-error-guide-steps a { color: #93c5fd; }
+
 /* Sheet status table */
 .sp-sheet-table { display: flex; flex-direction: column; gap: 5px; }
 .sp-sheet-row {

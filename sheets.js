@@ -322,13 +322,20 @@ export async function loadWorkflowsFromSheet(forceRefresh = false) {
 export async function testConnection() {
   const { SPREADSHEET_ID, API_KEY, FETCH_TIMEOUT_MS } = SHEETS_CONFIG;
 
-  if (!SPREADSHEET_ID || !API_KEY) {
-    return {
-      ok:    false,
-      error: 'Chưa nhập Spreadsheet ID hoặc API Key',
-      title: null,
-      sheetTabs: [],
-    };
+  if (!SPREADSHEET_ID && !API_KEY) {
+    return { ok: false, needsSetup: true,
+      error: 'Chưa cấu hình — cần điền Spreadsheet ID và API Key trong Sheets Panel',
+      title: null, sheetTabs: [] };
+  }
+  if (!SPREADSHEET_ID) {
+    return { ok: false, needsSetup: true,
+      error: '🗂️ Chưa có Spreadsheet ID — mở Sheets Panel và điền vào',
+      title: null, sheetTabs: [] };
+  }
+  if (!API_KEY) {
+    return { ok: false, needsSetup: true, needsApiKey: true,
+      error: '🔑 Chưa có API Key — cần tạo trên Google Cloud Console (xem hướng dẫn bên dưới)',
+      title: null, sheetTabs: [] };
   }
 
   const url  = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}`
@@ -340,15 +347,34 @@ export async function testConnection() {
     const res = await fetch(url, { signal: ctrl.signal });
 
     if (!res.ok) {
-      let msg = `HTTP ${res.status}`;
+      let rawMsg = '';
+      let hint   = '';
       try {
         const body = await res.json();
-        msg = body?.error?.message || msg;
-        // Thông báo lỗi thân thiện hơn
-        if (res.status === 403) msg = 'API Key không hợp lệ hoặc chưa bật Sheets API';
-        if (res.status === 404) msg = 'Spreadsheet ID không tồn tại hoặc chưa được chia sẻ';
-      } catch {}
-      return { ok: false, error: msg, title: null, sheetTabs: [] };
+        rawMsg = body?.error?.message || '';
+        const status = body?.error?.status || '';
+
+        if (res.status === 403) {
+          // Phân biệt 3 nguyên nhân 403 khác nhau
+          if (rawMsg.includes('API key not valid') || rawMsg.includes('invalid')) {
+            hint = '🔑 API Key không hợp lệ — kiểm tra lại trên Google Cloud Console';
+          } else if (rawMsg.includes('not been used') || rawMsg.includes('disabled') || status === 'PERMISSION_DENIED' && rawMsg.includes('Sheets')) {
+            hint = '🔌 Google Sheets API chưa được bật — vào Cloud Console → Library → Enable Sheets API';
+          } else {
+            // Lỗi permission phổ biến nhất: Spreadsheet chưa được chia sẻ công khai
+            hint = '🔒 Spreadsheet chưa được chia sẻ công khai — Share → Anyone with link → Viewer';
+          }
+        } else if (res.status === 400) {
+          hint = '⚠️ API Key sai định dạng hoặc thiếu tham số';
+        } else if (res.status === 404) {
+          hint = '🗂️ Spreadsheet ID không tồn tại hoặc đã bị xóa';
+        } else {
+          hint = rawMsg || `Lỗi HTTP ${res.status}`;
+        }
+      } catch {
+        hint = `Lỗi HTTP ${res.status} — không đọc được phản hồi`;
+      }
+      return { ok: false, error: hint, httpStatus: res.status, title: null, sheetTabs: [] };
     }
 
     const json      = await res.json();

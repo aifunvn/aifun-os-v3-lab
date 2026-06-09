@@ -697,17 +697,26 @@ function closeSheetsPanel() {
 }
 
 function _fillSheetsPanelInputs() {
-  // Lấy config hiện tại từ localStorage nếu có
+  const idInput  = document.getElementById('spSheetId');
+  const keyInput = document.getElementById('spApiKey');
+
+  // 1. Ưu tiên localStorage (đã lưu bởi user)
   try {
     const saved = localStorage.getItem('aifun-sheets-config');
     if (saved) {
       const { sheetId, apiKey } = JSON.parse(saved);
-      const idInput  = document.getElementById('spSheetId');
-      const keyInput = document.getElementById('spApiKey');
       if (idInput  && sheetId) idInput.value  = sheetId;
       if (keyInput && apiKey)  keyInput.value  = apiKey;
     }
   } catch {}
+
+  // 2. Nếu input vẫn rỗng → dùng config.js (SPREADSHEET_ID đã hardcode)
+  import('./config.js').then(({ SHEETS_CONFIG }) => {
+    if (idInput  && !idInput.value  && SHEETS_CONFIG.SPREADSHEET_ID)
+      idInput.value  = SHEETS_CONFIG.SPREADSHEET_ID;
+    if (keyInput && !keyInput.value && SHEETS_CONFIG.API_KEY)
+      keyInput.value = SHEETS_CONFIG.API_KEY;
+  }).catch(() => {});
 }
 
 function _updateSheetsPanelStatus() {
@@ -832,22 +841,83 @@ async function testSheetsConnection() {
     if (resultEl) {
       resultEl.style.display = 'block';
       if (result.ok) {
+        // Kiểm tra 5 tabs bắt buộc
+        const required  = ['PROMPTS','SKILLS','SOPS','PROJECTS','WORKFLOWS'];
+        const found     = result.sheetTabs.map(t => t.toUpperCase());
+        const missing   = required.filter(r => !found.includes(r));
+        const allOk     = missing.length === 0;
+
         resultEl.className = 'sp-test-result ok';
         resultEl.innerHTML = `
           <div class="sp-test-result-title">✅ Kết nối thành công!</div>
-          <div>📊 Spreadsheet: <strong>${escHtml(result.title)}</strong></div>
-          <div>📋 Tìm thấy ${result.sheetTabs.length} tabs:</div>
+          <div style="margin-bottom:6px">📊 Spreadsheet: <strong>${escHtml(result.title)}</strong></div>
+          <div style="margin-bottom:4px">📋 ${result.sheetTabs.length} tabs tìm thấy:</div>
           <div class="sp-test-result-tabs">
-            ${result.sheetTabs.map(t => `<span class="sp-test-result-tab">${escHtml(t)}</span>`).join('')}
-          </div>`;
+            ${result.sheetTabs.map(t => {
+              const ok = required.includes(t.toUpperCase());
+              return `<span class="sp-test-result-tab" style="${ok ? '' : 'opacity:.5'}">${ok ? '✓ ' : ''}${escHtml(t)}</span>`;
+            }).join('')}
+          </div>
+          ${missing.length > 0 ? `
+          <div style="margin-top:8px;padding:8px;background:rgba(245,158,11,.1);border-radius:6px;font-size:.75rem;color:#92400e">
+            ⚠️ Thiếu tabs: <strong>${missing.join(', ')}</strong><br>
+            Tạo thêm tab trong Spreadsheet và đặt tên đúng chính xác.
+          </div>` : `
+          <div style="margin-top:6px;font-size:.75rem;color:#059669">✅ Đủ 5 tabs bắt buộc — sẵn sàng Sync!</div>`}`;
+
         updateSyncStatus('sheets');
-        toast('Kết nối Google Sheets thành công! 🎉', 'success');
+        toast(allOk ? '🎉 Kết nối thành công! Nhấn Sync để tải dữ liệu.' : '⚠️ Kết nối OK nhưng thiếu một số tabs.', allOk ? 'success' : 'error', 5000);
+
       } else {
+        // Hiện hướng dẫn chi tiết theo loại lỗi
+        const isApiKey   = result.needsApiKey || result.error.includes('API Key');
+        const isNotPublic = result.error.includes('chia sẻ') || result.error.includes('🔒');
+        const isApiDisabled = result.error.includes('chưa được bật') || result.error.includes('🔌');
+
+        let guide = '';
+        if (result.needsApiKey || isApiKey) {
+          guide = `
+            <div class="sp-error-guide">
+              <div class="sp-error-guide-title">📋 Cách tạo API Key (3 phút):</div>
+              <ol class="sp-error-guide-steps">
+                <li>Vào <a href="https://console.cloud.google.com" target="_blank" rel="noopener">console.cloud.google.com</a></li>
+                <li>Chọn Project (hoặc tạo mới)</li>
+                <li><strong>APIs & Services</strong> → <strong>Library</strong> → tìm <em>"Google Sheets API"</em> → <strong>Enable</strong></li>
+                <li><strong>APIs & Services</strong> → <strong>Credentials</strong> → <strong>+ Create Credentials</strong> → <strong>API Key</strong></li>
+                <li>Copy key → Dán vào ô API Key bên trên → <strong>Lưu cấu hình</strong></li>
+              </ol>
+            </div>`;
+        } else if (isNotPublic) {
+          guide = `
+            <div class="sp-error-guide">
+              <div class="sp-error-guide-title">📋 Cách chia sẻ Spreadsheet:</div>
+              <ol class="sp-error-guide-steps">
+                <li>Mở <a href="https://docs.google.com/spreadsheets/d/1hsD6pEqWmF7Z46SQrumip-wslTCOU1Jnb4f21hyuTyU" target="_blank" rel="noopener">AIFUN DATA CENTER</a></li>
+                <li>Click nút <strong>Share</strong> (góc trên phải)</li>
+                <li>Phần <strong>General access</strong> → đổi thành <strong>Anyone with the link</strong></li>
+                <li>Đảm bảo quyền là <strong>Viewer</strong> → <strong>Done</strong></li>
+                <li>Quay lại đây → nhấn <strong>Test Connection</strong> lại</li>
+              </ol>
+            </div>`;
+        } else if (isApiDisabled) {
+          guide = `
+            <div class="sp-error-guide">
+              <div class="sp-error-guide-title">📋 Cách bật Sheets API:</div>
+              <ol class="sp-error-guide-steps">
+                <li>Vào <a href="https://console.cloud.google.com/apis/library/sheets.googleapis.com" target="_blank" rel="noopener">Sheets API Library</a></li>
+                <li>Click <strong>Enable</strong></li>
+                <li>Chờ 1-2 phút để có hiệu lực</li>
+                <li>Nhấn <strong>Test Connection</strong> lại</li>
+              </ol>
+            </div>`;
+        }
+
         resultEl.className = 'sp-test-result error';
         resultEl.innerHTML = `
           <div class="sp-test-result-title">❌ Kết nối thất bại</div>
-          <div>${escHtml(result.error)}</div>`;
-        toast(`Lỗi kết nối: ${result.error}`, 'error', 5000);
+          <div style="margin-bottom:${guide ? '10px' : '0'}">${escHtml(result.error)}</div>
+          ${guide}`;
+        toast(`Lỗi: ${result.error}`, 'error', 6000);
       }
     }
     _updateSheetsPanelStatus();
