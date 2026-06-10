@@ -32,7 +32,7 @@ export const SHEETS_CONFIG = {
   // Spreadsheet: AIFUN DATA CENTER
   // URL: https://docs.google.com/spreadsheets/d/1hsD6pEqWmF7Z46SQrumip-wslTCOU1Jnb4f21hyuTyU
   SPREADSHEET_ID: '1hsD6pEqWmF7Z46SQrumip-wslTCOU1Jnb4f21hyuTyU',
-  API_KEY:        '',   // ← Điền API Key sau khi tạo trên Google Cloud Console
+  API_KEY: 'AIzaSyDq5zGOLWQroCOeVKFrUmS5ufZ8sy008Uc',  // ← Điền API Key sau khi tạo trên Google Cloud Console
   // ────────────────────────────────────────────────────────────────
 
   // Tên tab trong Spreadsheet — phải khớp chính xác (case-sensitive)
