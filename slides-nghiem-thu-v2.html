@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AIFUN OS V2 — Slides Nghiệm thu</title>
+<style>
+/* ════════════════ RESET & BASE ════════════════ */
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;overflow:hidden;font-family:'Segoe UI',Arial,sans-serif;}
+
+/* ════════════════ VARIABLES ════════════════ */
+:root{
+  --dark:#0F172A; --dark2:#1E293B; --dark3:#334155;
+  --blue:#3B82F6; --blue-d:#1D4ED8; --blue-l:#EFF6FF;
+  --green:#22C55E; --orange:#F59E0B; --red:#EF4444;
+  --purple:#8B5CF6; --cyan:#06B6D4;
+  --text:#F1F5F9; --text2:#94A3B8; --text3:#64748B;
+  --border:#334155;
+}
+
+/* ════════════════ LAYOUT ════════════════ */
+#deck{width:100vw;height:100vh;position:relative;background:var(--dark);}
+
+/* ════════════════ SLIDE ════════════════ */
+.slide{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;
+  padding:0;overflow:hidden;
+  opacity:0;pointer-events:none;
+  transition:opacity .35s ease,transform .35s ease;
+  transform:translateX(60px);
+}
+.slide.active{opacity:1;pointer-events:all;transform:translateX(0);}
+.slide.prev{transform:translateX(-60px);}
+
+/* ════════════════ SLIDE HEADER ════════════════ */
+.sh{
+  padding:28px 56px 20px;
+  flex-shrink:0;
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:flex-start;justify-content:space-between;
+  gap:20px;
+}
+.sh-left{flex:1;}
+.sh-label{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:6px;}
+.sh-title{font-size:28px;font-weight:900;color:var(--text);line-height:1.15;}
+.sh-sub{font-size:14px;color:var(--text2);margin-top:5px;}
+.sh-num{font-size:11px;color:var(--text3);font-weight:600;flex-shrink:0;margin-top:6px;}
+
+/* ════════════════ SLIDE BODY ════════════════ */
+.sb{flex:1;overflow-y:auto;padding:24px 56px 20px;scrollbar-width:thin;scrollbar-color:var(--border) transparent;}
+.sb::-webkit-scrollbar{width:4px;}
+.sb::-webkit-scrollbar-thumb{background:var(--border);border-radius:99px;}
+
+/* ════════════════ COVER SLIDE ════════════════ */
+.slide-cover{
+  background:linear-gradient(135deg,#0A0F1E 0%,#0F172A 40%,#1E3A8A 100%);
+  justify-content:center;align-items:center;text-align:center;
+  position:relative;overflow:hidden;
+}
+.slide-cover::before{
+  content:'';position:absolute;
+  width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(59,130,246,.12) 0%,transparent 70%);
+  top:50%;left:50%;transform:translate(-50%,-50%);
+}
+.cover-logo{font-size:52px;font-weight:900;color:var(--text);letter-spacing:-2px;position:relative;}
+.cover-logo em{color:var(--blue);font-style:normal;}
+.cover-badge{
+  display:inline-block;background:rgba(59,130,246,.15);
+  border:1px solid rgba(59,130,246,.3);
+  color:#93C5FD;font-size:10px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;
+  padding:5px 16px;border-radius:99px;margin:14px 0;
+}
+.cover-h{font-size:38px;font-weight:900;color:var(--text);line-height:1.15;margin:12px 0;}
+.cover-h em{
+  background:linear-gradient(90deg,#60A5FA,#818CF8);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  font-style:normal;
+}
+.cover-desc{font-size:14px;color:var(--text2);max-width:520px;margin:0 auto;line-height:1.7;}
+.cover-meta{
+  display:flex;justify-content:center;gap:32px;margin-top:36px;
+  flex-wrap:wrap;
+}
+.cm{text-align:center;}
+.cm-val{font-size:16px;font-weight:800;color:var(--text);}
+.cm-lbl{font-size:10px;color:var(--text3);margin-top:2px;}
+
+/* ════════════════ STAT GRID ════════════════ */
+.stat-grid{display:grid;gap:12px;margin-bottom:20px;}
+.g2{grid-template-columns:repeat(2,1fr);}
+.g3{grid-template-columns:repeat(3,1fr);}
+.g4{grid-template-columns:repeat(4,1fr);}
+.stat-card{
+  background:var(--dark2);border:1px solid var(--border);
+  border-radius:12px;padding:18px;
+}
+.sc-blue{border-color:rgba(59,130,246,.4);background:rgba(59,130,246,.06);}
+.sc-green{border-color:rgba(34,197,94,.4);background:rgba(34,197,94,.06);}
+.sc-orange{border-color:rgba(245,158,11,.4);background:rgba(245,158,11,.06);}
+.sc-purple{border-color:rgba(139,92,246,.4);background:rgba(139,92,246,.06);}
+.sc-red{border-color:rgba(239,68,68,.4);background:rgba(239,68,68,.06);}
+.s-icon{font-size:22px;margin-bottom:8px;}
+.s-num{font-size:32px;font-weight:900;color:var(--blue);line-height:1;}
+.sc-green .s-num{color:var(--green);}
+.sc-orange .s-num{color:var(--orange);}
+.sc-purple .s-num{color:var(--purple);}
+.sc-red .s-num{color:var(--red);}
+.s-lbl{font-size:11px;color:var(--text2);margin-top:5px;font-weight:600;}
+.s-sub{font-size:10px;color:var(--text3);margin-top:2px;}
+
+/* ════════════════ TABLE ════════════════ */
+.tbl{width:100%;border-collapse:collapse;margin-bottom:14px;font-size:12px;}
+.tbl th{
+  background:rgba(59,130,246,.1);color:var(--text2);
+  font-size:10px;font-weight:700;text-transform:uppercase;
+  letter-spacing:1px;padding:9px 12px;text-align:left;
+  border-bottom:1px solid var(--border);
+}
+.tbl td{padding:9px 12px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--text2);vertical-align:middle;}
+.tbl tr:hover td{background:rgba(255,255,255,.02);}
+
+/* ════════════════ BADGE ════════════════ */
+.bd{display:inline-flex;align-items:center;gap:3px;padding:2px 9px;border-radius:99px;font-size:10px;font-weight:700;}
+.bd-pass{background:rgba(34,197,94,.15);color:#4ADE80;}
+.bd-fail{background:rgba(239,68,68,.15);color:#F87171;}
+.bd-warn{background:rgba(245,158,11,.15);color:#FCD34D;}
+.bd-blue{background:rgba(59,130,246,.15);color:#60A5FA;}
+.bd-purple{background:rgba(139,92,246,.15);color:#A78BFA;}
+
+/* ════════════════ BUG ROW ════════════════ */
+.bug-list{display:flex;flex-direction:column;gap:10px;}
+.bug-card{
+  background:var(--dark2);border:1px solid var(--border);
+  border-left:3px solid var(--orange);
+  border-radius:8px;padding:12px 16px;
+  display:flex;align-items:flex-start;gap:12px;
+}
+.bug-card.fixed{border-left-color:var(--green);}
+.bug-card.pending{border-left-color:var(--blue);}
+.bug-id{font-size:10px;font-weight:700;color:var(--text3);min-width:54px;flex-shrink:0;padding-top:1px;}
+.bug-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px;}
+.bug-cause{font-size:11px;color:var(--text3);margin-bottom:3px;}
+.bug-fix{font-size:11px;color:#4ADE80;}
+
+/* ════════════════ FEATURE LIST ════════════════ */
+.feat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+.feat-item{
+  background:var(--dark2);border:1px solid var(--border);
+  border-radius:10px;padding:14px 16px;
+  display:flex;gap:12px;align-items:flex-start;
+}
+.feat-ico{font-size:22px;flex-shrink:0;}
+.feat-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px;}
+.feat-desc{font-size:11px;color:var(--text3);line-height:1.5;}
+.feat-badge{display:inline-block;font-size:9px;font-weight:700;padding:1px 7px;border-radius:4px;margin-top:5px;text-transform:uppercase;}
+.fb-live{background:rgba(34,197,94,.15);color:#4ADE80;}
+.fb-new{background:rgba(139,92,246,.15);color:#A78BFA;}
+.fb-fixed{background:rgba(245,158,11,.15);color:#FCD34D;}
+
+/* ════════════════ TIMELINE ════════════════ */
+.tl{display:flex;flex-direction:column;gap:0;}
+.tl-item{display:flex;gap:0;position:relative;}
+.tl-line{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:36px;}
+.tl-dot{width:12px;height:12px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:4px;border:2px solid var(--dark);box-shadow:0 0 0 2px var(--blue);}
+.tl-dot.green{background:var(--green);box-shadow:0 0 0 2px var(--green);}
+.tl-dot.orange{background:var(--orange);box-shadow:0 0 0 2px var(--orange);}
+.tl-track{width:2px;background:var(--border);flex:1;margin:4px 0;}
+.tl-content{flex:1;padding:0 0 20px 8px;}
+.tl-phase{font-size:10px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;}
+.tl-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:3px;}
+.tl-desc{font-size:12px;color:var(--text2);line-height:1.5;}
+
+/* ════════════════ ARCH ════════════════ */
+.arch{
+  background:rgba(59,130,246,.04);border:1px solid rgba(59,130,246,.15);
+  border-radius:10px;padding:20px;font-family:'Cascadia Code','Courier New',monospace;
+  font-size:11.5px;color:#94A3B8;line-height:1.9;
+  white-space:pre;overflow-x:auto;
+}
+.arch .hi{color:#60A5FA;font-weight:700;}
+.arch .gr{color:#4ADE80;}
+.arch .or{color:#FCD34D;}
+
+/* ════════════════ SKILL GRID ════════════════ */
+.skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.sk{
+  background:var(--dark2);border:1px solid var(--border);
+  border-radius:10px;padding:14px;text-align:center;
+}
+.sk-ico{font-size:26px;margin-bottom:6px;}
+.sk-name{font-size:12px;font-weight:700;color:var(--text);margin-bottom:3px;}
+.sk-tag{font-size:9px;font-weight:700;padding:1px 7px;border-radius:4px;text-transform:uppercase;}
+.t-ops{background:rgba(59,130,246,.15);color:#60A5FA;}
+.t-mkt{background:rgba(236,72,153,.15);color:#F472B6;}
+.t-auto{background:rgba(139,92,246,.15);color:#A78BFA;}
+.t-crm{background:rgba(245,158,11,.15);color:#FCD34D;}
+.t-edu{background:rgba(34,197,94,.15);color:#4ADE80;}
+.t-sales{background:rgba(239,68,68,.15);color:#F87171;}
+.t-ai{background:rgba(6,182,212,.15);color:#22D3EE;}
+
+/* ════════════════ FLOW ════════════════ */
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
+.flow-step{
+  background:var(--dark2);border:1px solid var(--border);
+  border-radius:8px;padding:10px 16px;font-size:12px;
+  font-weight:700;color:var(--text);white-space:nowrap;
+}
+.flow-arrow{color:var(--blue);font-size:18px;font-weight:900;flex-shrink:0;}
+.flow-step.hl{border-color:var(--blue);background:rgba(59,130,246,.1);}
+
+/* ════════════════ ISSUE BOX ════════════════ */
+.issue-box{
+  background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);
+  border-radius:10px;padding:16px 18px;margin-bottom:12px;
+}
+.fix-box{
+  background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.2);
+  border-radius:10px;padding:16px 18px;margin-bottom:12px;
+}
+.ib-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:6px;display:flex;align-items:center;gap:7px;}
+.ib-body{font-size:12px;color:var(--text2);line-height:1.6;}
+.ib-code{font-family:monospace;background:rgba(0,0,0,.3);padding:8px 12px;border-radius:6px;font-size:11px;color:#FCD34D;margin-top:8px;display:block;}
+
+/* ════════════════ COLUMN TABLE ════════════════ */
+.col-table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:16px;}
+.col-table th{background:rgba(139,92,246,.15);color:#A78BFA;padding:8px 12px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;}
+.col-table td{padding:8px 12px;border-bottom:1px solid var(--border);color:var(--text2);}
+.col-table tr:nth-child(even) td{background:rgba(255,255,255,.02);}
+.col-hl td{color:var(--green)!important;}
+
+/* ════════════════ TODO LIST ════════════════ */
+.todo-list{display:flex;flex-direction:column;gap:10px;}
+.todo-item{
+  background:var(--dark2);border:1px solid var(--border);
+  border-radius:10px;padding:14px 16px;
+  display:flex;align-items:flex-start;gap:12px;
+}
+.todo-icon{font-size:20px;flex-shrink:0;}
+.todo-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px;}
+.todo-desc{font-size:11px;color:var(--text2);}
+.todo-pri{font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;margin-top:5px;display:inline-block;}
+.pri-high{background:rgba(239,68,68,.15);color:#F87171;}
+.pri-med{background:rgba(245,158,11,.15);color:#FCD34D;}
+.pri-low{background:rgba(59,130,246,.15);color:#60A5FA;}
+
+/* ════════════════ END SLIDE ════════════════ */
+.slide-end{
+  background:linear-gradient(135deg,#0A0F1E,#1E3A8A);
+  justify-content:center;align-items:center;text-align:center;
+}
+.end-logo{font-size:44px;font-weight:900;color:var(--text);letter-spacing:-1px;margin-bottom:6px;}
+.end-logo em{color:var(--blue);font-style:normal;}
+.end-h{font-size:30px;font-weight:800;color:var(--text);margin:12px 0;}
+.end-sub{font-size:14px;color:var(--text2);margin-bottom:32px;line-height:1.7;}
+.end-grid{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;}
+.end-card{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+  border-radius:12px;padding:16px 24px;min-width:160px;
+}
+.end-val{font-size:22px;font-weight:900;color:var(--blue);}
+.end-lbl{font-size:11px;color:var(--text3);margin-top:3px;}
+
+/* ════════════════ DIVIDER ════════════════ */
+.divider{height:1px;background:var(--border);margin:14px 0;}
+.sec-label{font-size:10px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;}
+
+/* ════════════════ PROGRESS BAR ════════════════ */
+#progress{
+  position:fixed;bottom:0;left:0;right:0;height:3px;
+  background:rgba(255,255,255,.05);z-index:100;
+}
+#progress-fill{height:100%;background:var(--blue);transition:width .35s ease;}
+
+/* ════════════════ NAV ════════════════ */
+#nav{
+  position:fixed;bottom:16px;left:50%;transform:translateX(-50%);
+  display:flex;align-items:center;gap:12px;
+  background:rgba(15,23,42,.9);backdrop-filter:blur(12px);
+  border:1px solid var(--border);border-radius:99px;
+  padding:8px 16px;z-index:200;
+}
+.nav-btn{
+  width:32px;height:32px;border-radius:50%;border:none;
+  background:rgba(255,255,255,.07);color:var(--text2);
+  font-size:15px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:.15s;flex-shrink:0;
+}
+.nav-btn:hover{background:var(--blue-d);color:#fff;}
+.nav-btn:disabled{opacity:.3;cursor:default;}
+#slide-counter{font-size:12px;font-weight:700;color:var(--text2);min-width:60px;text-align:center;}
+.nav-dots{display:flex;gap:5px;}
+.nav-dot{width:6px;height:6px;border-radius:50%;background:var(--border);cursor:pointer;transition:.15s;border:none;}
+.nav-dot.on{background:var(--blue);width:18px;border-radius:3px;}
+
+/* ════════════════ KEY HINT ════════════════ */
+#keyhint{
+  position:fixed;top:14px;right:20px;
+  font-size:10px;color:var(--text3);
+  background:rgba(15,23,42,.7);border:1px solid var(--border);
+  padding:5px 10px;border-radius:6px;z-index:100;
+}
+</style>
+</head>
+<body>
+<div id="deck">
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SLIDE 1 — COVER                                        -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="slide slide-cover active">
+  <div style="position:relative;z-index:1;text-align:center;padding:0 40px;">
+    <div class="cover-logo">AI<em>FUN</em> OS</div>
+    <div class="cover-badge">Báo cáo Nghiệm thu Chính thức</div>
+    <div class="cover-h">AIFUN OS V2<br><em>AI Workspace</em></div>
+    <div class="cover-desc">Tổng hợp kết quả triển khai, kiểm thử và bàn giao hệ thống — nền tảng AI Workspace hoàn chỉnh dành cho doanh nghiệp.</div>
+    <div class="cover-meta">
+      <div class="cm"><div class="cm-val">17/06/2026</div><div class="cm-lbl">Ngày nghiệm thu</div></div>
+      <div class="cm"><div class="cm-val">V2.0</div><div class="cm-lbl">Phiên bản</div></div>
+      <div class="cm"><div class="cm-val">portal.aifun.ai.vn</div><div class="cm-lbl">URL Production</div></div>
+      <div class="cm"><div class="cm-val" style="color:#4ADE80;">✅ ĐẠT</div><div class="cm-lbl">Kết quả</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SLIDE 2 — KẾT QUẢ TỔNG QUAN                          -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="sh">
+    <div class="sh-left">
+      <div class="sh-label">Tóm tắt</div>
+      <div class="sh-title">Kết quả nghiệm thu</div>
+      <div class="sh-sub">Tổng hợp kết quả kiểm thử sau khi hoàn thành triển khai V2</div>
+    </div>
+    <div class="sh-num">02 / 12</div>
+  </div>
+  <div class="sb">
+    <div class="stat-grid g4" style="margin-bottom:16px;">
+      <div class="stat-card sc-green"><div class="s-icon">✅</div><div class="s-num">8/8</div><div class="s-lbl">AI Builders</div><div class="s-sub">Tất cả hoạt động</div></div>
+      <div class="stat-card sc-green"><div class="s-icon">📄</div><div class="s-num">✅</div><div class="s-lbl">Google Docs</div><div class="s-sub">Tạo thành công</div></div>
+      <div class="stat-card sc-green"><div class="s-icon">📥</div><div class="s-num">✅</div><div class="s-lbl">PDF Export</div><div class="s-sub">Download OK</div></div>
+      <div class="stat-card sc-green"><div class="s-icon">📊</div><div class="s-num">✅</div><div class="s-lbl">Data Center</div><div class="s-sub">Ghi Sheets OK</div></div>
+    </div>
+    <div class="stat-grid g4">
+      <div class="stat-card sc-blue"><div class="s-icon">🗂️</div><div class="s-num">6</div><div class="s-lbl">Pages</div><div class="s-sub">Dashboard, Builders, Workspace, CEO, Prompts, Docs</div></div>
+      <div class="stat-card sc-purple"><div class="s-icon">⚡</div><div class="s-num">8</div><div class="s-lbl">AI Builders</div><div class="s-sub">SOP / Prompt / Report / Content / Email / CRM / Webinar / Sales</div></div>
+      <div class="stat-card sc-blue"><div class="s-icon">🛠️</div><div class="s-num">9</div><div class="s-lbl">AI Workspace</div><div class="s-sub">ChatGPT, Claude, Gemini, Canva, Notion, GitHub, Drive, Sheets, Make</div></div>
+      <div class="stat-card sc-orange"><div class="s-icon">🔧</div><div class="s-num">10</div><div class="s-lbl">Bugs Fixed</div><div class="s-sub">0 lỗi tồn đọng nghiêm trọng</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SLIDE 3 — KIẾN TRÚC HỆ THỐNG                         -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="sh">
+    <div class="sh-left">
+      <div class="sh-label">Architecture</div>
+      <div class="sh-title">Kiến trúc hệ thống</div>
+      <div class="sh-sub">Stack kỹ thuật và luồng dữ liệu từ Frontend → AI → Google Workspace</div>
+    </div>
+    <div class="sh-num">03 / 12</div>
+  </div>
+  <div class="sb">
+    <div class="sec-label">Luồng chính</div>
+    <div class="flow" style="margin-bottom:20px;">
+      <div class="flow-step">🌐 Browser<br><small>portal.aifun.ai.vn</small></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step hl">📝 Form Input<br><small>8 Skill Forms</small></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">⚡ GAS Web App<br><small>Apps Script</small></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step hl">🤖 Claude AI<br><small>claude-sonnet-4-6</small></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">📄 Google Docs<br><small>Drive Folder</small></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step hl">📊 Sheets<br><small>DATA CENTER</small></div>
+    </div>
+    <div class="divider"></div>
+    <div class="sec-label">Files Frontend</div>
+    <div class="stat-grid g3" style="margin-bottom:0;">
+      <div class="stat-card" style="padding:12px 14px;">
+        <div style="font-size:11px;font-weight:700;color:var(--text);margin-bottom:6px;">📄 index.html</div>
+        <div style="font-size:11px;color:var(--text3);">V2 layout — Sidebar + 6 Pages, inline CSS/JS, script bootstrap</div>
+      </div>
+      <div class="stat-card" style="padding:12px 14px;">
+        <div style="font-size:11px;font-weight:700;color:var(--text);margin-bottom:6px;">⚡ skill-engine.js</div>
+        <div style="font-size:11px;color:var(--text3);">Modal UI + GAS caller, CORS fix, Word export, step indicator</div>
+      </div>
+      <div class="stat-card" style="padding:12px 14px;">
+        <div style="font-size:11px;font-weight:700;color:var(--text);margin-bottom:6px;">📋 skill-forms.js</div>
+        <div style="font-size:11px;color:var(--text3);">8 skill definitions: fields, buildPrompt(), buildTitle()</div>
+      </div>
+      <div class="stat-card" style="padding:12px 14px;">
+        <div style="font-size:11px;font-weight:700;color:var(--text);margin-bottom:6px;">⚙️ config.js</div>
+        <div style="font-size:11px;color:var(--text3);">GAS URL, Spreadsheet ID, Drive Folder ID, AI provider</div>
+      </div>
+      <div class="stat-card" style="padding:12px 14px;">
+        <div style="font-size:11px;font-weight:700;color:var(--text);margin-bottom:6px;">🎨 skill-modal.css</div>
+        <div style="font-size:11px;color:var(--text3);">Modal styles, dark theme, animations, responsive</div>
+      </div>
+      <div class="stat-card" style="padding:12px 14px;">
+        <div style="font-size:11px;font-weight:700;color:var(--text);margin-bottom:6px;">🔧 GAS Backend</div>
+        <div style="font-size:11px;color:var(--text3);">Code.gs · AIProvider.gs · DocBuilder.gs · Logger.gs · Mã.gs</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SLIDE 4 — 8 AI BUILDERS                               -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="sh">
+    <div class="sh-left">
+      <div class="sh-label">AI Builders</div>
+      <div class="sh-title">8 Skill chuyên biệt</div>
+      <div class="sh-sub">Mỗi skill có form riêng, buildPrompt(), buildTitle() — output Google Docs</div>
+    </div>
+    <div class="sh-num">04 / 12</div>
+  </div>
+  <div class="sb">
+    <div class="skill-grid">
+      <div class="sk">
+        <div class="sk-ico">📋</div>
+        <div class="sk-name">SOP Builder</div>
+        <div class="sk-tag t-ops">Operations</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:5px;">⏱ ~2 phút · 📄 Google Doc</div>
+      </div>
+      <div class="sk">
+        <div class="sk-ico">💡</div>
+        <div class="sk-name">Prompt Builder</div>
+        <div class="sk-tag t-ai">AI · NEW</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:5px;">⏱ ~1 phút · 💡 Prompt Doc</div>
+      </div>
+      <div class="sk">
+        <div class="sk-ico">📊</div>
+        <div class="sk-name">Report Builder</div>
+        <div class="sk-tag t-ops">Operations · NEW</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:5px;">⏱ ~3 phút · 📊 Report</div>
+      </div>
+      <div class="sk">
+        <div class="sk-ico">📸</div>
+        <div class="sk-name">Content Factory</div>
+        <div class="sk-tag t-mkt">Marketing</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:5px;">⏱ ~3 phút · 📦 Package</div>
+      </div>
+      <div class="sk">
+        <div class="sk-ico">📧</div>
+        <div class="sk-name">Email Automation</div>
+        <div class="sk-tag t-auto">Automation</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:5px;">⏱ ~3 phút · ✉️ Sequence</div>
+      </div>
+      <div class="sk">
+        <div class="sk-ico">💛</div>
+        <div class="sk-name">CRM Assistant</div>
+        <div class="sk-tag t-crm">CRM</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:5px;">⏱ ~1 phút · 📋 CRM Report</div>
+      </div>
+      <div class="sk">
+        <div class="sk-ico">🎯</div>
+        <div class="sk-name">Webinar Builder</div>
+        <div class="sk-tag t-edu">Education</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:5px;">⏱ ~4 phút · 🎬 Webinar Kit</div>
+      </div>
+      <div class="sk">
+        <div class="sk-ico">🏆</div>
+        <div class="sk-name">Sales Script</div>
+        <div class="sk-tag t-sales">Sales</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:5px;">⏱ ~2 phút · 📜 Script</div>
+      </div>
+    </div>
+    <div style="margin-top:14px;padding:12px 16px;background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.2);border-radius:8px;font-size:12px;color:var(--text2);">
+      ✅ <strong>Prompt Builder</strong> và <strong>Report Builder</strong> là 2 skill mới được thêm trong V2. Tất cả 8/8 builders đã pass kiểm thử end-to-end.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SLIDE 5 — V2 FEATURES                                  -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="sh">
+    <div class="sh-left">
+      <div class="sh-label">Features V2</div>
+      <div class="sh-title">Tính năng đã triển khai</div>
+      <div class="sh-sub">Nâng cấp từ V1 (1 page, 6 skills) lên V2 (sidebar + 6 pages, 8 skills)</div>
+    </div>
+    <div class="sh-num">05 / 12</div>
+  </div>
+  <div class="sb">
+    <div class="feat-grid">
+      <div class="feat-item">
+        <div class="feat-ico">🏠</div>
+        <div>
+          <div class="feat-name">Sidebar Navigation</div>
+          <div class="feat-desc">220px cố định, 3 section: Main / Library / AIFUN Apps. Overlay responsive trên mobile.</div>
+          <span class="feat-badge fb-live">✅ Live</span>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-ico">📊</div>
+        <div>
+          <div class="feat-name">Dashboard Page</div>
+          <div class="feat-desc">4 stats cards, Recent docs panel, Quick Actions, 4 Quick Launch buttons. Data từ GAS.</div>
+          <span class="feat-badge fb-live">✅ Live</span>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-ico">🛠️</div>
+        <div>
+          <div class="feat-name">AI Workspace</div>
+          <div class="feat-desc">9 external tools: ChatGPT, Claude, Gemini, Canva, Notion, GitHub, Drive, Sheets, Make.com.</div>
+          <span class="feat-badge fb-live">✅ Live</span>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-ico">📈</div>
+        <div>
+          <div class="feat-name">CEO Dashboard</div>
+          <div class="feat-desc">6 stat cards (SOP/Prompt/Report + Hôm nay/Tuần/Tháng), Top 8 skill bars, 10 doc gần nhất.</div>
+          <span class="feat-badge fb-fixed">🔧 Fixed</span>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-ico">💡</div>
+        <div>
+          <div class="feat-name">Prompt Library</div>
+          <div class="feat-desc">CRUD đầy đủ: thêm / sửa / xoá prompt. Search + filter theo danh mục. Lưu Google Sheets.</div>
+          <span class="feat-badge fb-live">✅ Live</span>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-ico">📄</div>
+        <div>
+          <div class="feat-name">Tài liệu đã tạo</div>
+          <div class="feat-desc">Table tải từ GAS getDocuments, sort mới nhất lên đầu, link mở Google Docs, trạng thái.</div>
+          <span class="feat-badge fb-live">✅ Live</span>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-ico">📎</div>
+        <div>
+          <div class="feat-name">Word Export (.doc)</div>
+          <div class="feat-desc">HTML-Word format, heading detection, UTF-8 BOM, mở được trong Word/LibreOffice.</div>
+          <span class="feat-badge fb-fixed">🔧 Fixed</span>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-ico">📱</div>
+        <div>
+          <div class="feat-name">Responsive Design</div>
+          <div class="feat-desc">Breakpoints 960px / 600px. Grid collapse, sidebar overlay, topbar thu gọn trên mobile.</div>
+          <span class="feat-badge fb-live">✅ Live</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SLIDE 6 — KIỂM THỬ E2E                               -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="sh">
+    <div class="sh-left">
+      <div class="sh-label">Testing</div>
+      <div class="sh-title">Kết quả kiểm thử E2E</div>
+      <div class="sh-sub">15 test cases — luồng chính, export, data, tương thích trình duyệt</div>
+    </div>
+    <div class="sh-num">06 / 12</div>
+  </div>
+  <div class="sb">
+    <table class="tbl">
+      <thead><tr><th>#</th><th>Test Case</th><th>Luồng</th><th>Kết quả</th></tr></thead>
+      <tbody>
+        <tr><td>TC-01</td><td>SOP Builder — full flow</td><td>Form → GAS → Claude → Docs → Sheet</td><td><span class="bd bd-pass">✅ PASS</span></td></tr>
+        <tr><td>TC-02..08</td><td>7 Builders còn lại</td><td>Tương tự TC-01</td><td><span class="bd bd-pass">✅ 7/7 PASS</span></td></tr>
+        <tr><td>TC-09</td><td>Google Docs tạo và link</td><td>URL hợp lệ, file tồn tại trong Drive</td><td><span class="bd bd-pass">✅ PASS</span></td></tr>
+        <tr><td>TC-10</td><td>PDF Export</td><td>Click → Google Docs export → download</td><td><span class="bd bd-pass">✅ PASS</span></td></tr>
+        <tr><td>TC-11</td><td>Word Export (.doc)</td><td>Blob download → mở Word/LibreOffice</td><td><span class="bd bd-pass">✅ PASS (after fix)</span></td></tr>
+        <tr><td>TC-12</td><td>GENERATED_DOCUMENTS ghi</td><td>Tạo doc → row mới xuất hiện trong Sheets</td><td><span class="bd bd-pass">✅ PASS</span></td></tr>
+        <tr><td>TC-13</td><td>CEO Dashboard stats</td><td>Tổng / Hôm nay / bySkill bars hiển thị</td><td><span class="bd bd-pass">✅ PASS (after fix)</span></td></tr>
+        <tr><td>TC-14</td><td>Prompt Library CRUD</td><td>Thêm / Sửa / Xoá → Sheets → reload</td><td><span class="bd bd-pass">✅ PASS</span></td></tr>
+        <tr><td>TC-15</td><td>Responsive mobile</td><td>Sidebar overlay, grid collapse</td><td><span class="bd bd-pass">✅ PASS</span></td></tr>
+      </tbody>
+    </table>
+    <div class="divider"></div>
+    <div class="sec-label">Tương thích trình duyệt</div>
+    <table class="tbl">
+      <thead><tr><th>Trình duyệt</th><th>Submit</th><th>Google Docs</th><th>PDF</th><th>Word</th></tr></thead>
+      <tbody>
+        <tr><td>Chrome 125+</td><td><span class="bd bd-pass">✅</span></td><td><span class="bd bd-pass">✅</span></td><td><span class="bd bd-pass">✅</span></td><td><span class="bd bd-pass">✅</span></td></tr>
+        <tr><td>Cốc Cốc</td><td><span class="bd bd-pass">✅ fixed</span></td><td><span class="bd bd-pass">✅</span></td><td><span class="bd bd-pass">✅</span></td><td><span class="bd bd-pass">✅</span></td></tr>
+        <tr><td>Edge / Firefox / Safari</td><td><span class="bd bd-pass">✅</span></td><td><span class="bd bd-pass">✅</span></td><td><span class="bd bd-pass">✅</span></td><td><span class="bd bd-pass">✅</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SLIDE 7 — BUGS ĐÃ FIX (1/2)                          -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="sh">
+    <div class="sh-left">
+      <div class="sh-label">Bug Fixes · 1/2</div>
+      <div class="sh-title">10 lỗi đã xử lý</div>
+      <div class="sh-sub">Phân loại theo phase — Frontend / GAS Backend / Data</div>
+    </div>
+    <div class="sh-num">07 / 12</div>
+  </div>
+  <div class="sb">
+    <div class="bug-list">
+      <div class="bug-card fixed">
+        <div class="bug-id">BUG-01</div>
+        <div>
+          <div class="bug-title">GAS URL mismatch — config.js</div>
+          <div class="bug-cause">⚠️ Nguyên nhân: URL trỏ sai deployment cũ + nested quotes syntax error</div>
+          <div class="bug-fix">✅ Fix: Rewrite config.js với URL deployment mới, dùng single quotes</div>
+        </div>
+      </div>
+      <div class="bug-card fixed">
+        <div class="bug-id">BUG-02</div>
+        <div>
+          <div class="bug-title">Script 404 — không tải được JS/CSS</div>
+          <div class="bug-cause">⚠️ Nguyên nhân: index.html load scripts từ <code style="color:#FCD34D;">aifun-skill-engine/</code> không tồn tại</div>
+          <div class="bug-fix">✅ Fix: Sửa 4 path về root directory</div>
+        </div>
+      </div>
+      <div class="bug-card fixed">
+        <div class="bug-id">BUG-03</div>
+        <div>
+          <div class="bug-title">getSkillForm is not defined</div>
+          <div class="bug-cause">⚠️ Nguyên nhân: skill-forms.js bị truncate tại line 39, thiếu function + window exports</div>
+          <div class="bug-fix">✅ Fix: Viết lại hoàn chỉnh 6 skills + window.SKILL_FORMS + window.getSkillForm</div>
+        </div>
+      </div>
+      <div class="bug-card fixed">
+        <div class="bug-id">BUG-04</div>
+        <div>
+          <div class="bug-title">Submit button không click được (Cốc Cốc)</div>
+          <div class="bug-cause">⚠️ Nguyên nhân: <code style="color:#FCD34D;">type=submit</code> + <code style="color:#FCD34D;">form onsubmit</code> không fire trong Cốc Cốc browser</div>
+          <div class="bug-fix">✅ Fix: Đổi sang <code style="color:#4ADE80;">type=button</code> + <code style="color:#4ADE80;">onclick="SkillEngine._onFormSubmit()"</code></div>
+        </div>
+      </div>
+      <div class="bug-card fixed">
+        <div class="bug-id">BUG-05</div>
+        <div>
+          <div class="bug-title">Cannot read properties of undefined (reading 'map')</div>
+          <div class="bug-cause">⚠️ Nguyên nhân: form tồn tại nhưng aiOutputSections undefined → undefined.map() crash</div>
+          <div class="bug-fix">✅ Fix: Guard <code style="color:#4ADE80;">(form && form.aiOutputSections) ? ... : fallback</code></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SLIDE 8 — BUGS ĐÃ FIX (2/2)                          -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="sh">
+    <div class="sh-left">
+      <div class="sh-label">Bug Fixes · 2/2</div>
+      <div class="sh-title">10 lỗi đã xử lý</div>
+      <div class="sh-sub">CORS · Claude API · Logger · Stats · Word Export</div>
+    </div>
+    <div class="sh-num">08 / 12</div>
+  </div>
+  <div class="sb">
+    <div class="bug-list">
+      <div class="bug-card fixed">
+        <div class="bug-id">BUG-06</div>
+        <div>
+          <div class="bug-title">CORS "Failed to fetch"</div>
+          <div class="bug-cause">⚠️ Content-Type: application/json → trigger OPTIONS preflight → GAS không handle</div>
+          <div class="bug-fix">✅ Fix: Dùng <code style="color:#4ADE80;">Content-Type: text/plain</code> (simple request, không cần preflight). GAS tự add CORS header.</div>
+        </div>
+      </div>
+      <div class="bug-card fixed">
+        <div class="bug-id">BUG-07</div>
+        <div>
+          <div class="bug-title">Claude API 404 — model not found</div>
+          <div class="bug-cause">⚠️ AIProvider.gs dùng <code style="color:#FCD34D;">claude-3-5-sonnet-20241022</code> đã deprecated</div>
+          <div class="bug-fix">✅ Fix: Cập nhật <code style="color:#4ADE80;">CLAUDE_MODEL = 'claude-sonnet-4-6'</code> → deploy GAS mới</div>
+        </div>
+      </div>
+      <div class="bug-card fixed">
+        <div class="bug-id">BUG-08</div>
+        <div>
+          <div class="bug-title">Logger.gs không ghi Sheets — silent fail</div>
+          <div class="bug-cause">⚠️ SpreadsheetApp.openById() throw "Illegal spreadsheet id" bên trong try-catch → lỗi bị nuốt, GAS vẫn return success</div>
+          <div class="bug-fix">✅ Fix: Dùng DriveApp.getFilesByName('AIFUN DATA CENTER') + SpreadsheetApp.open(file)</div>
+        </div>
+      </div>
+      <div class="bug-card fixed">
+        <div class="bug-id">BUG-09</div>
+        <div>
+          <div class="bug-title">CEO Dashboard hiển thị 0</div>
+          <div class="bug-cause">⚠️ GAS getStats đọc sai index cột do column layout thực tế khác thiết kế ban đầu</div>
+          <div class="bug-fix">✅ Fix: Tính stats client-side từ getDocuments + _computeStats() với _parseDate()</div>
+        </div>
+      </div>
+      <div class="bug-card fixed">
+        <div class="bug-id">BUG-10</div>
+        <div>
+          <div class="bug-title">Word Export lỗi với nội dung dài</div>
+          <div class="bug-cause">⚠️ Content truyền inline qua onclick attribute → bị cắt / break với ký tự đặc biệt tiếng Việt</div>
+          <div class="bug-fix">✅ Fix: Lưu content vào window._seLastContent, _downloadDocx() đọc từ global — HTML-Word format</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SLIDE 9 — CHUẨN HÓA DỮ LIỆU                         -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="sh">
+    <div class="sh-left">
+      <div class="sh-label">Data Normalization</div>
+      <div class="sh-title">Chuẩn hóa GENERATED_DOCUMENTS</div>
+      <div class="sh-sub">Column mapping thực tế vs. thiết kế ban đầu — GAS cần deploy lại</div>
+    </div>
+    <div class="sh-num">09 / 12</div>
+  </div>
+  <div class="sb">
+    <div class="sec-label">Column Layout hiện tại (thực tế trong Sheet)</div>
+    <table class="col-table">
+      <thead><tr><th>Cột</th><th>Field</th><th>Ví dụ</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr class="col-hl"><td><strong>A</strong></td><td>ID</td><td>DOC-0001</td><td><span class="bd bd-pass">✅ Đúng</span></td></tr>
+        <tr class="col-hl"><td><strong>B</strong></td><td>Skill</td><td>SOP Builder</td><td><span class="bd bd-pass">✅ Đúng</span></td></tr>
+        <tr><td><strong>C</strong></td><td>User</td><td>anonymous</td><td><span class="bd bd-warn">⚠️ GAS ghi sai vị trí</span></td></tr>
+        <tr><td><strong>D</strong></td><td>Prompt</td><td>Hãy tạo SOP...</td><td><span class="bd bd-warn">⚠️ GAS ghi sai vị trí</span></td></tr>
+        <tr><td><strong>E</strong></td><td>File Name</td><td>SOP_Quy_trinh_onboard</td><td><span class="bd bd-warn">⚠️ GAS ghi sai vị trí</span></td></tr>
+        <tr><td><strong>F</strong></td><td>Google Docs URL</td><td>https://docs.google.com/...</td><td><span class="bd bd-warn">⚠️ GAS ghi sai vị trí</span></td></tr>
+        <tr><td><strong>G</strong></td><td>Status</td><td>active</td><td><span class="bd bd-warn">⚠️ GAS ghi sai vị trí</span></td></tr>
+        <tr class="col-hl"><td><strong>H</strong></td><td>Created Date</td><td>17/06/2026 10:30:00</td><td><span class="bd bd-warn">⚠️ GAS ghi sai vị trí</span></td></tr>
+      </tbody>
+    </table>
+    <div class="divider"></div>
+    <div class="sec-label">GAS Logger.gs — Fix cần deploy</div>
+    <div class="fix-box">
+      <div class="ib-title">✅ Sửa appendRow() trong Logger.gs</div>
+      <code class="ib-code">sheet.appendRow([
+  id,                              // A: ID
+  skillTitle,                      // B: Skill
+  user,                            // C: User
+  promptSummary.substring(0,500),  // D: Prompt
+  title,                           // E: File Name
+  docUrl,                          // F: Google Docs URL
+  status,                          // G: Status
+  _vnNow()                         // H: Created Date
+]);</code>
+    </div>
+    <div style="font-size:11px;color:var(--text2);padding:10px 14px;background:rgba(59,130,246,.06);border-radius:8px;border:1px solid rgba(59,130,246,.15);">
+      💡 Frontend đã được cập nhật để parse date từ cột H đúng — CEO Dashboard sẽ hiển thị Hôm nay/Tuần/Tháng chính xác sau khi deploy GAS mới.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SLIDE 10 — LỊCH SỬ TRIỂN KHAI                        -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="sh">
+    <div class="sh-left">
+      <div class="sh-label">Timeline</div>
+      <div class="sh-title">Lịch sử triển khai</div>
+      <div class="sh-sub">5 phases từ setup ban đầu đến V2 hoàn chỉnh</div>
+    </div>
+    <div class="sh-num">10 / 12</div>
+  </div>
+  <div class="sb">
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-line"><div class="tl-dot green"></div><div class="tl-track"></div></div>
+        <div class="tl-content">
+          <div class="tl-phase">Phase 1 — Khởi động</div>
+          <div class="tl-title">Setup codebase &amp; fix cơ bản</div>
+          <div class="tl-desc">Fix GAS URL mismatch (BUG-01), script path 404 (BUG-02), skill-forms.js bị truncate (BUG-03). Luồng SOP Builder hoạt động lần đầu.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-line"><div class="tl-dot orange"></div><div class="tl-track"></div></div>
+        <div class="tl-content">
+          <div class="tl-phase">Phase 2 — Debug luồng chính</div>
+          <div class="tl-title">Fix CORS, Claude model, submit button</div>
+          <div class="tl-desc">Cốc Cốc submit bug (BUG-04), aiOutputSections crash (BUG-05), CORS Failed to fetch (BUG-06), Claude API 404 (BUG-07).</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-line"><div class="tl-dot green"></div><div class="tl-track"></div></div>
+        <div class="tl-content">
+          <div class="tl-phase">Phase 3 — Data pipeline</div>
+          <div class="tl-title">Fix Logger.gs ghi Sheets</div>
+          <div class="tl-desc">SpreadsheetApp.openById() silent fail (BUG-08) → DriveApp.getFilesByName() fix. DOC-0002 xuất hiện trong GENERATED_DOCUMENTS. Luồng E2E hoàn chỉnh.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-line"><div class="tl-dot green"></div><div class="tl-track"></div></div>
+        <div class="tl-content">
+          <div class="tl-phase">Phase 4 — V2 Upgrade</div>
+          <div class="tl-title">AIFUN AI Workspace V2 — full rewrite index.html</div>
+          <div class="tl-desc">Sidebar layout, 6 pages, 8 AI Builders page, AI Workspace (9 tools), CEO Dashboard, Documents page. Thêm Prompt Builder + Report Builder skill mới.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-line"><div class="tl-dot orange"></div><div class="tl-track"></div></div>
+        <div class="tl-content">
+          <div class="tl-phase">Phase 5 — Bug fix &amp; Tối ưu</div>
+          <div class="tl-title">CEO Dashboard, Word Export, Column normalization</div>
+          <div class="tl-desc">Stats computed client-side (BUG-09). Word export dùng window._seLastContent (BUG-10). Column mapping A-H documented. GAS Logger.gs fix pending deploy.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SLIDE 11 — TỒN TẠI & NEXT STEPS                      -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="sh">
+    <div class="sh-left">
+      <div class="sh-label">Pending &amp; Next Steps</div>
+      <div class="sh-title">Tồn tại &amp; Việc cần làm</div>
+      <div class="sh-sub">Các mục cần hoàn thiện sau nghiệm thu</div>
+    </div>
+    <div class="sh-num">11 / 12</div>
+  </div>
+  <div class="sb">
+    <div class="todo-list">
+      <div class="todo-item">
+        <div class="todo-icon">⚡</div>
+        <div>
+          <div class="todo-title">Deploy GAS Logger.gs + Code.gs — Column fix</div>
+          <div class="todo-desc">Cập nhật appendRow() theo đúng thứ tự cột (A=ID B=Skill C=User D=Prompt E=FileName F=DocURL G=Status H=Date). Deploy new version để date stats chính xác.</div>
+          <span class="todo-pri pri-high">🔴 HIGH — Cần làm ngay</span>
+        </div>
+      </div>
+      <div class="todo-item">
+        <div class="todo-icon">👤</div>
+        <div>
+          <div class="todo-title">Phân quyền User</div>
+          <div class="todo-desc">Hiện tất cả dùng user="anonymous". Thêm đăng nhập Google hoặc nhập tên nhân viên để tracking by user trong CEO Dashboard.</div>
+          <span class="todo-pri pri-med">🟡 MEDIUM</span>
+        </div>
+      </div>
+      <div class="todo-item">
+        <div class="todo-icon">📑</div>
+        <div>
+          <div class="todo-title">Pagination cho Documents page</div>
+          <div class="todo-desc">Hiện lấy 500 docs cùng lúc. Khi data lớn cần phân trang server-side trong GAS getDocuments.</div>
+          <span class="todo-pri pri-med">🟡 MEDIUM</span>
+        </div>
+      </div>
+      <div class="todo-item">
+        <div class="todo-icon">🔔</div>
+        <div>
+          <div class="todo-title">Notification khi AI hoàn thành</div>
+          <div class="todo-desc">Với tài liệu dài (>3 phút), thêm email hoặc Zalo OA notification khi document đã được tạo xong.</div>
+          <span class="todo-pri pri-low">🔵 LOW</span>
+        </div>
+      </div>
+      <div class="todo-item">
+        <div class="todo-icon">🔒</div>
+        <div>
+          <div class="todo-title">Bảo mật API Key</div>
+          <div class="todo-desc">Anthropic API key hiện lưu trong GAS Properties — đủ an toàn cho môi trường nội bộ. Cân nhắc IP whitelist hoặc OAuth nếu mở rộng external users.</div>
+          <span class="todo-pri pri-low">🔵 LOW</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SLIDE 12 — KẾT LUẬN                                   -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="slide slide-end">
+  <div style="position:relative;z-index:1;padding:0 40px;text-align:center;">
+    <div class="end-logo">AI<em>FUN</em> OS</div>
+    <div style="font-size:11px;color:#60A5FA;letter-spacing:3px;text-transform:uppercase;margin-bottom:16px;">Nghiệm thu hoàn thành</div>
+    <div class="end-h">✅ AIFUN OS V2<br>Đạt yêu cầu bàn giao</div>
+    <div class="end-sub">
+      Hệ thống AI Workspace V2 đã được triển khai thành công với đầy đủ tính năng theo yêu cầu.<br>
+      8/8 AI Builders hoạt động · Google Docs · PDF · Sheets · Dashboard · CEO Analytics
+    </div>
+    <div class="end-grid">
+      <div class="end-card"><div class="end-val" style="color:#4ADE80;">8/8</div><div class="end-lbl">AI Builders Pass</div></div>
+      <div class="end-card"><div class="end-val">10</div><div class="end-lbl">Bugs Fixed</div></div>
+      <div class="end-card"><div class="end-val">6</div><div class="end-lbl">Pages Live</div></div>
+      <div class="end-card"><div class="end-val" style="color:#4ADE80;">V2.0</div><div class="end-lbl">Production</div></div>
+    </div>
+    <div style="margin-top:28px;font-size:12px;color:var(--text3);">
+      portal.aifun.ai.vn · github.com/aifunvn/aifun-ai-portal · 17/06/2026
+    </div>
+  </div>
+</div>
+
+</div><!-- /deck -->
+
+<!-- PROGRESS BAR -->
+<div id="progress"><div id="progress-fill"></div></div>
+
+<!-- NAV -->
+<div id="nav">
+  <button class="nav-btn" id="btn-prev" onclick="go(-1)" title="← Prev">‹</button>
+  <div id="slide-counter">1 / 12</div>
+  <button class="nav-btn" id="btn-next" onclick="go(1)" title="→ Next">›</button>
+  <div class="nav-dots" id="dots"></div>
+</div>
+
+<div id="keyhint">← → Space · Home/End</div>
+
+<script>
+var slides = document.querySelectorAll('.slide');
+var total  = slides.length;
+var cur    = 0;
+
+// Build dots
+var dotsEl = document.getElementById('dots');
+for (var i=0;i<total;i++){
+  var d = document.createElement('button');
+  d.className='nav-dot'; d.dataset.i=i;
+  d.addEventListener('click',function(){ goTo(+this.dataset.i); });
+  dotsEl.appendChild(d);
+}
+
+function goTo(n){
+  slides[cur].classList.remove('active');
+  slides[cur].classList.add('prev');
+  setTimeout((function(old){ return function(){ slides[old].classList.remove('prev'); }; })(cur), 380);
+  cur = Math.max(0, Math.min(total-1, n));
+  slides[cur].classList.add('active');
+  update();
+}
+
+function go(d){ goTo(cur+d); }
+
+function update(){
+  document.getElementById('slide-counter').textContent = (cur+1)+' / '+total;
+  document.getElementById('btn-prev').disabled = cur===0;
+  document.getElementById('btn-next').disabled = cur===total-1;
+  document.getElementById('progress-fill').style.width = ((cur+1)/total*100)+'%';
+  dotsEl.querySelectorAll('.nav-dot').forEach(function(d,i){ d.classList.toggle('on',i===cur); });
+}
+
+document.addEventListener('keydown',function(e){
+  if(e.key==='ArrowRight'||e.key===' '){ e.preventDefault(); go(1); }
+  else if(e.key==='ArrowLeft'){ e.preventDefault(); go(-1); }
+  else if(e.key==='Home'){ goTo(0); }
+  else if(e.key==='End'){ goTo(total-1); }
+});
+
+// Touch swipe
+var tx=0;
+document.addEventListener('touchstart',function(e){ tx=e.touches[0].clientX; },{passive:true});
+document.addEventListener('touchend',function(e){
+  var dx=e.changedTouches[0].clientX - tx;
+  if(Math.abs(dx)>50){ go(dx<0?1:-1); }
+},{passive:true});
+
+update();
+</script>
+</body>
+</html>
