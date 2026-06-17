@@ -361,14 +361,14 @@ const SkillEngine = (() => {
     try {
       const res = await fetch(url, {
         method:  'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'text/plain' },
         body:    JSON.stringify(payload),
         signal:  controller.signal,
       });
 
-      if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
-
-      const data = await res.json();
+      const text = await res.text();
+      let data;
+      try { data = JSON.parse(text); } catch(pe) { throw new Error('GAS response không hợp lệ: ' + text.substring(0, 200)); }
       if (data.error) throw new Error(data.error);
       return data;
 
