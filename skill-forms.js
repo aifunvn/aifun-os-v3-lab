@@ -155,6 +155,70 @@ const SKILL_FORMS = {
     }
   },
 
+  'prompt-builder': {
+    skillId: 'prompt-builder',
+    title: 'Prompt Builder',
+    icon: '💡',
+    category: 'AI',
+    color: '#06B6D4',
+    desc: 'Tạo prompt AI chuyên nghiệp, tối ưu cho Claude, ChatGPT, Gemini.',
+    estimatedTime: '~1 phút',
+    outputType: 'Prompt Document',
+    aiOutputSections: ['Phân tích yêu cầu', 'Xây dựng prompt', 'Tài liệu hóa'],
+    fields: [
+      { id: 'promptGoal', label: 'Mục tiêu prompt *', type: 'text', placeholder: 'VD: Viết email bán hàng, Phân tích dữ liệu, Tạo nội dung marketing...', required: true, span: 2 },
+      { id: 'aiModel', label: 'AI Model mục tiêu', type: 'select', options: ['Claude (Anthropic)', 'ChatGPT (OpenAI)', 'Gemini (Google)', 'Tất cả các model'], required: false },
+      { id: 'promptType', label: 'Loại prompt', type: 'select', options: ['Zero-shot', 'Few-shot (có ví dụ)', 'Chain of Thought', 'Role-play / Persona', 'Structured Output'], required: false },
+      { id: 'context', label: 'Ngữ cảnh sử dụng *', type: 'textarea', placeholder: 'Mô tả ngữ cảnh: Bạn là ai, dùng prompt này để làm gì, đầu ra mong muốn thế nào?', required: true, span: 2 },
+      { id: 'examples', label: 'Ví dụ đầu ra mong muốn (tuỳ chọn)', type: 'textarea', placeholder: 'Paste ví dụ kết quả tốt bạn muốn AI tạo ra...', span: 2 }
+    ],
+    buildPrompt: function(d) {
+      return 'Hãy tạo một prompt AI chuyên nghiệp bằng tiếng Việt với thông tin sau:\n' +
+        '- Mục tiêu: ' + d.promptGoal + '\n' +
+        '- AI Model: ' + (d.aiModel || 'Claude') + '\n' +
+        '- Loại prompt: ' + (d.promptType || 'Zero-shot') + '\n' +
+        '- Ngữ cảnh: ' + d.context + '\n' +
+        (d.examples ? '- Ví dụ đầu ra: ' + d.examples + '\n' : '') +
+        '\nYêu cầu tài liệu prompt phải có: 1) Prompt hoàn chỉnh sẵn sàng copy-paste, 2) Giải thích từng phần của prompt, 3) Hướng dẫn tùy chỉnh biến (variables), 4) Ví dụ đầu ra mẫu, 5) Tips tối ưu kết quả, 6) 3 biến thể prompt (ngắn/trung/dài).';
+    },
+    buildTitle: function(d) {
+      return 'Prompt_' + (d.promptGoal || 'builder').replace(/\s+/g, '_').substring(0, 40);
+    }
+  },
+
+  'report-builder': {
+    skillId: 'report-builder',
+    title: 'Report Builder',
+    icon: '📊',
+    category: 'Operations',
+    color: '#3B82F6',
+    desc: 'Tạo báo cáo kinh doanh chuyên nghiệp: doanh thu, KPI, phân tích chiến lược.',
+    estimatedTime: '~3 phút',
+    outputType: 'Business Report',
+    aiOutputSections: ['Phân tích dữ liệu', 'Xây dựng báo cáo', 'Tạo tài liệu'],
+    fields: [
+      { id: 'reportType', label: 'Loại báo cáo *', type: 'select', options: ['Báo cáo doanh thu', 'Báo cáo KPI tháng', 'Báo cáo hiệu suất team', 'Báo cáo chiến lược', 'Báo cáo marketing', 'Báo cáo tổng kết năm', 'Báo cáo tùy chỉnh'], required: true },
+      { id: 'period', label: 'Kỳ báo cáo *', type: 'text', placeholder: 'VD: Tháng 6/2026, Q2 2026, Năm 2025...', required: true },
+      { id: 'department', label: 'Phòng ban / Công ty *', type: 'text', placeholder: 'VD: Sales, Marketing, Công ty AIFUN...', required: true },
+      { id: 'audience', label: 'Người nhận báo cáo', type: 'text', placeholder: 'VD: Ban Giám đốc, Cổ đông, Trưởng nhóm...', required: false },
+      { id: 'keyData', label: 'Dữ liệu / Số liệu chính *', type: 'textarea', placeholder: 'Nhập số liệu quan trọng: doanh thu, tăng trưởng, KPI đạt được, vấn đề nổi bật...', required: true, span: 2 },
+      { id: 'goals', label: 'Mục tiêu kỳ tiếp theo (tuỳ chọn)', type: 'textarea', placeholder: 'Kế hoạch và mục tiêu kỳ sau...', span: 2 }
+    ],
+    buildPrompt: function(d) {
+      return 'Hãy tạo báo cáo kinh doanh chuyên nghiệp bằng tiếng Việt:\n' +
+        '- Loại báo cáo: ' + d.reportType + '\n' +
+        '- Kỳ báo cáo: ' + d.period + '\n' +
+        '- Đơn vị: ' + d.department + '\n' +
+        '- Người nhận: ' + (d.audience || 'Ban Giám đốc') + '\n' +
+        '- Dữ liệu chính: ' + d.keyData + '\n' +
+        (d.goals ? '- Mục tiêu kỳ tiếp: ' + d.goals + '\n' : '') +
+        '\nBáo cáo cần có: Tóm tắt điều hành (Executive Summary), Kết quả so với mục tiêu, Phân tích nguyên nhân tăng/giảm, Biểu đồ minh họa (mô tả), Top 3 thành tựu, Top 3 thách thức, Kế hoạch hành động kỳ tiếp theo, Kết luận và kiến nghị.';
+    },
+    buildTitle: function(d) {
+      return 'Report_' + (d.reportType || 'business').replace(/\s+/g, '_').substring(0, 40) + '_' + (d.period || '').replace(/\s+/g, '_').substring(0, 15);
+    }
+  },
+
   'sales-script-generator': {
     skillId: 'sales-script-generator',
     title: 'Sales Script Generator',
