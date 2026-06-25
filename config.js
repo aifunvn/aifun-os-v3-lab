@@ -1,5 +1,5 @@
 const AIFUN_CONFIG = {
-  gasWebAppUrl: 'https://script.google.com/macros/s/AKfycbwzivpm_ora4NdhsVxSV4_u3DJW9Xyfh2H_QPcrJMRJvvUQ4yriwZnDl-bbHEj01_vlBw/exec',
+  gasWebAppUrl: 'https://script.google.com/macros/s/AKfycbwgXRjrOtpXkgKAahqMmcBn0NAh4LZVo2IB9qdywCc5RBfFqs1uTBcoh1R6cDZcGYSsdQ/exec',
   driveFolderId: '1NthsP7JrOCrT5nGeU2j3annqLLDiHBJZ',
   spreadsheetId: '1a4oNBBycqIn1AhYTxWob5gdsajIn82frHvQ-AxXoMvo',
   generatedDocsSheet: 'GENERATED_DOCUMENTS',
